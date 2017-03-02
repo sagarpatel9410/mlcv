@@ -23,6 +23,7 @@ for n = 1:iter
     
     % Split function - Modify here and try other types of split function
     
+    
     dim = randi(D-1); % Pick one random dimension
     d_min = single(min(data(:,dim))) + eps; % Find the data range of this dimension
     d_max = single(max(data(:,dim))) - eps;
