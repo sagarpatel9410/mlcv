@@ -41,7 +41,6 @@ param.split = 'IG';     % Currently support 'information gain' only
 % Grow all trees
 trees = growTrees(data_train,param);
 
-
 %%%%%%%%%%%%%%%%%%%%%%
 % Evaluate/Test Random Forest
 
@@ -59,9 +58,6 @@ p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...
 plot_toydata(data_test);
 
 
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % experiment with Caltech101 dataset for image categorisation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -73,6 +69,7 @@ init;
 % Set 'showImg' in getData.m to 0 to stop displaying training and testing images and their feature vectors
 [data_train, data_test] = getData('Caltech');
 close all;
+
 
 
 
