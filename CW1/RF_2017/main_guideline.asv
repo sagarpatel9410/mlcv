@@ -59,9 +59,6 @@ p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...
 plot_toydata(data_test);
 
 
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % experiment with Caltech101 dataset for image categorisation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

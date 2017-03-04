@@ -22,7 +22,12 @@ idx_best = [];
 for n = 1:iter
     
     % Split function - Modify here and try other types of split function
-    [idx_, dim, t] = axis_aligned(D, data);
+    switch n
+        case 2
+            [idx_, dim, t] = two_pixel_test(D, data);
+        otherwise
+            [idx_, dim, t] = axis_aligned(D, data);
+    end
     
     ig = getIG(data,idx_); % Calculate information gain
     
