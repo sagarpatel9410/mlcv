@@ -25,4 +25,3 @@ function [idx_, dim, t] = linear_learner( ~, data )
     idx_ = data(:,1:2)*dim < t;
 
 end
-
