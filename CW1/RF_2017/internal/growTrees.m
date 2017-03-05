@@ -70,6 +70,7 @@ for T = 1:param.num
                 % Normalisation
                 tree(T).leaf(cnt).prob = tree(T).leaf(cnt).prob./sum(tree(T).leaf(cnt).prob);
                 
+                % we attach the probabilies matrix only to the first tree rather than all the trees
                 if strcmp(param.split,'Var')
                     tree(1).cc(cnt_total,:) = mean(data(tree(T).node(n).idx,1:end-1),1); % For RF clustering, unfinished
                 else

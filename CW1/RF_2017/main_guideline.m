@@ -6,6 +6,8 @@
 % The codes are made for educational purposes only.
 % Some parts are inspired by Karpathy's RF Toolbox
 
+rng(0);
+
 % Under BSD Licence
 
 % Initialisation
@@ -30,10 +32,10 @@ scatter(data_test(:,1),data_test(:,2),'.b');
 
 
 % Set the random forest parameters for instance, 
-param.num = 10;         % Number of trees
-param.depth = 5;        % trees depth
-param.splitNum = 3;     % Number of split functions to try
-param.weakLearner='axis-aligned';
+param.num = 100;         % Number of trees
+param.depth = 10;        % trees depth
+param.splitNum = 5;     % Number of split functions to try
+param.weakLearner='two-pixel';
 param.split = 'IG';     % Currently support 'information gain' only
 
 
@@ -47,9 +49,8 @@ trees = growTrees(data_train,param);
 % Evaluate/Test Random Forest
 
 % grab the few data points and evaluate them one by one by the leant RF
-leaves=testTrees_fast(data_test,trees);
+leaves=testTrees_fast(data_test,trees,param.weakLearner);
 p_rf = trees(1).prob(leaves,:);
-
 
 % get the probabilities of the each class
 p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...

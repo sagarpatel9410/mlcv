@@ -47,6 +47,10 @@ for n = 1:iter
     
 end
 
+if(length(idx(idx_best))==0||length(idx(~idx_best))==0)
+    fprintf('error');
+end
+
 nodeL.idx = idx(idx_best);
 nodeR.idx = idx(~idx_best);
 
