@@ -11,12 +11,13 @@ rng(0);
 % Under BSD Licence
 
 % Initialisation
-init;
+% init;
 
 % Select dataset
 [data_train, data_test] = getData('Toy_Spiral'); % {'Toy_Gaussian', 'Toy_Spiral', 'Toy_Circle', 'Caltech'}
 
 
+% for loop to iterate over all the types of split functions
 %%%%%%%%%%%%%
 % check the training and testing data
     % data_train(:,1:2) : [num_data x dim] Training 2D vectors
@@ -61,6 +62,7 @@ p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...
           sum(reshape(p_rf(:,3),[length(data_test),param.num]),2)];
 
 [~,data_test(:,3)]=max(p_rf_sum');
+
 plot_toydata(data_test);
 
 
@@ -68,13 +70,13 @@ plot_toydata(data_test);
 % experiment with Caltech101 dataset for image categorisation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-init;
-
-% Select dataset
-% we do bag-of-words technique to convert images to vectors (histogram of codewords)
-% Set 'showImg' in getData.m to 0 to stop displaying training and testing images and their feature vectors
-[data_train, data_test] = getData('Caltech');
-close all;
+% init;
+% 
+% % Select dataset
+% % we do bag-of-words technique to convert images to vectors (histogram of codewords)
+% % Set 'showImg' in getData.m to 0 to stop displaying training and testing images and their feature vectors
+% [data_train, data_test] = getData('Caltech');
+% close all;
 
 
 

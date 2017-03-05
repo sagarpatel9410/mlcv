@@ -30,6 +30,12 @@ for n = 1:iter
             [idx_, dim, t] = axis_aligned(D, data);
         case 'two-pixel'
             [idx_, dim, t] = two_pixel_test(D, data);
+        case 'linear'
+            [idx_, dim, t] = linear_learner(D, data);
+        case 'quad-features'
+            [idx_, dim, t] = quad_feature_learner(D, data);
+        case 'cube-features'
+            [idx_, dim, t] = cube_feature_learner(D, data);
     end
     
     % Calculate information gain
