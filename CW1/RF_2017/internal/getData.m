@@ -125,17 +125,21 @@ switch MODE
         % K-means clustering
         numBins = 256; % for instance,
         
-        
-        % write your own codes here
-        % ...
-            
+        %cluster the descriptors
+        [~,C]=kmeans(desc_sel',numBins); 
+          
        
         disp('Encoding Images...')
         % Vector Quantisation
+        data_train=zeros(length(classList)*15,numBins);
         
-        % write your own codes here
-        % ...
-  
+        %iterate over all the images
+        for i = 1:length(classList)
+            for j = 1:15
+                idx = kmeans(single(desc_tr{i,j}'),numBins,'MaxIter',1,'Start',C,'Distance', 'hamming');
+                data_train(15*(i-1)+j,1:end)=  histc(idx,1:numBins)./numel(idx);
+            end
+        end
         
         % Clear unused varibles to save memory
         clearvars desc_tr desc_sel
@@ -183,7 +187,17 @@ switch MODE
         
         % write your own codes here
         % ...
-        
+        length_clist = length(classList);
+        data_query=zeros(length_clist * 15, numBins);
+        %iterate over all these points
+        for i=1:length_clist
+                for j=1:15
+                    % determine the distribution of centers
+                    idx = kmeans(single(desc_te{i,j}'),numBins,'MaxIter',1,'Start',C,'Distance', 'hamming');
+                    % get normalised histograms
+                    data_query(15*(i-1)+j,1:end)=histc(idx,1:numBins)./numel(idx);
+                end
+        end
         
     otherwise % Dense point for 2D toy data
         xrange = [-1.5 1.5];
