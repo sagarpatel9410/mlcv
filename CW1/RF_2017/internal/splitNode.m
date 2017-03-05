@@ -4,6 +4,7 @@ function [node,nodeL,nodeR] = splitNode(data,node,param)
 visualise = 0;
 
 % Initilise child nodes
+weak_learner_type=param.weakLearner;
 iter = param.splitNum;
 nodeL = struct('idx',[],'t',nan,'dim',0,'prob',[]);
 nodeR = struct('idx',[],'t',nan,'dim',0,'prob',[]);
@@ -22,11 +23,11 @@ idx_best = [];
 for n = 1:iter
     
     % Split function - Modify here and try other types of split function
-    switch n
-        case 2
-            [idx_, dim, t] = two_pixel_test(D, data);
-        otherwise
+    switch weak_learner_type
+        case 'axis-aligned'
             [idx_, dim, t] = axis_aligned(D, data);
+        case 'two-pixel'
+            [idx_, dim, t] = two_pixel_test(D, data);
     end
     
     ig = getIG(data,idx_); % Calculate information gain

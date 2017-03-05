@@ -33,7 +33,9 @@ scatter(data_test(:,1),data_test(:,2),'.b');
 param.num = 10;         % Number of trees
 param.depth = 5;        % trees depth
 param.splitNum = 3;     % Number of split functions to try
+param.weakLearner='axis-aligned';
 param.split = 'IG';     % Currently support 'information gain' only
+
 
 %%%%%%%%%%%%%%%%%%%%%%
 % Train Random Forest
