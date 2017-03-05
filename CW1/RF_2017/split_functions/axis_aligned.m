@@ -1,8 +1,13 @@
 function [idx_, dim, t] = axis_aligned(D, data)
-    dim = randi(D-1); % Pick one random dimension
-    d_min = single(min(data(:,dim))) + eps; % Find the data range of this dimension
+    % Pick one random dimension
+    % We use D-1 because the last column will hold the class
+    dim = randi(D-1);
+    % Find the data range of this dimension
+    d_min = single(min(data(:,dim))) + eps; 
     d_max = single(max(data(:,dim))) - eps;
-    t = d_min + rand*((d_max-d_min)); % Pick a random value within the range as threshold
+    % Pick a random value within the range as threshold
+    t = d_min + rand*((d_max-d_min)); 
+    % return the index of the left node
     idx_ = data(:,dim) < t;
 end
 
