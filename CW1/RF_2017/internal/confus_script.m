@@ -1,4 +1,4 @@
-[~,c] = max(p_rf');
+[~,rf_classes] = max(p_rf_sum');
 accuracy_rf = sum(c==data_test(:,end)')/length(c); % Classification accuracy (for Caltech dataset)
 idx = sub2ind([10, 10], data_test(:,end)', c) ;
 conf = zeros(10) ;

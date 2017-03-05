@@ -136,7 +136,7 @@ switch MODE
         %iterate over all the images
         for i = 1:length(classList)
             for j = 1:15
-                idx = kmeans(single(desc_tr{i,j}'),numBins,'MaxIter',1,'Start',C,'Distance', 'hamming');
+                idx = kmeans(single(desc_tr{i,j}'),numBins,'MaxIter',1,'Start',C,'Distance', 'sqeuclidean');
                 data_train(15*(i-1)+j,1:end)=  histc(idx,1:numBins)./numel(idx);
             end
         end
@@ -193,7 +193,7 @@ switch MODE
         for i=1:length_clist
                 for j=1:15
                     % determine the distribution of centers
-                    idx = kmeans(single(desc_te{i,j}'),numBins,'MaxIter',1,'Start',C,'Distance', 'hamming');
+                    idx = kmeans(single(desc_te{i,j}'),numBins,'MaxIter',1,'Start',C,'Distance', 'sqeuclidean');
                     % get normalised histograms
                     data_query(15*(i-1)+j,1:end)=histc(idx,1:numBins)./numel(idx);
                 end

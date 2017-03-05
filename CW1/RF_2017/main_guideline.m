@@ -76,14 +76,27 @@ init;
 [data_train, data_test] = getData('Caltech');
 close all;
 
-
-
-
 % Set the random forest parameters ...
-% Train Random Forest ...
-% Evaluate/Test Random Forest ...
-% show accuracy and confusion matrix ...
+param.num = 5;         % Number of trees
+param.depth = 5;        % trees depth
+param.splitNum = 3;     % Number of split functions to try
+param.weakLearner='quad-features';
+param.split = 'IG';     % Currently support 'information gain' only
 
+% Train Random Forest ...
+trees = growTrees(data_train,param);
+% Evaluate/Test Random Forest ...
+leaves=testTrees_fast(data_test,trees,param.weakLearner);
+p_rf = trees(1).prob(leaves,:);
+
+p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...
+          sum(reshape(p_rf(:,2),[length(data_test),param.num]),2)...
+          sum(reshape(p_rf(:,3),[length(data_test),param.num]),2)];
+
+[~,rf_classes]=max(p_rf_sum');
+
+% show accuracy and confusion matrix ...
+confus_script;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % random forest codebook for Caltech101 image categorisation
