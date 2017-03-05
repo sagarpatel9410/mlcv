@@ -50,6 +50,12 @@ trees = growTrees(data_train,param);
 
 % grab the few data points and evaluate them one by one by the leant RF
 leaves=testTrees_fast(data_test,trees,param.weakLearner);
+%increment each cell in leaves by 1
+leaves=testTrees_fast(data_test,trees) + 1;
+
+%append new row to prob
+b = [1/3,1/3,1/3];
+trees(1).prob = [b;trees(1).prob];
 p_rf = trees(1).prob(leaves,:);
 
 % get the probabilities of the each class
