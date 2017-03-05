@@ -53,12 +53,6 @@ for n = 1:iter
     
 end
 
-%if IG becomes too small then make this node a leaf.
-if(abs(ig_best) < abs(param.igThreshold))
-    node.t = nan;
-    node.dim = 0;
-    return;
-end
 
 nodeL.idx = idx(idx_best);
 nodeR.idx = idx(~idx_best);
