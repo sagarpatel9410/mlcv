@@ -33,11 +33,11 @@ scatter(data_test(:,1),data_test(:,2),'.b');
 
 % Set the random forest parameters for instance, 
 param.num = 100;         % Number of trees
-param.depth = 10;        % trees depth
-param.splitNum = 5;     % Number of split functions to try
-param.weakLearner='two-pixel';
+param.depth = 5;        % trees depth
+param.splitNum = 3;     % Number of split functions to try
+param.weakLearner='axis-aligned';
 param.split = 'IG';     % Currently support 'information gain' only
-
+param.igThreshold = -2;
 
 %%%%%%%%%%%%%%%%%%%%%%
 % Train Random Forest
@@ -47,11 +47,8 @@ trees = growTrees(data_train,param);
 
 %%%%%%%%%%%%%%%%%%%%%%
 % Evaluate/Test Random Forest
-
-% grab the few data points and evaluate them one by one by the leant RF
-leaves=testTrees_fast(data_test,trees,param.weakLearner);
 %increment each cell in leaves by 1
-leaves=testTrees_fast(data_test,trees) + 1;
+leaves=testTrees_fast(data_test,trees,param.weakLearner) + 1;
 
 %append new row to prob
 b = [1/3,1/3,1/3];

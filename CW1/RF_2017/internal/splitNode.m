@@ -47,8 +47,11 @@ for n = 1:iter
     
 end
 
-if(length(idx(idx_best))==0||length(idx(~idx_best))==0)
-    fprintf('error');
+%if IG becomes too small then make this node a leaf.
+if(abs(ig_best) < abs(param.igThreshold))
+    node.t = nan;
+    node.dim = 0;
+    return;
 end
 
 nodeL.idx = idx(idx_best);
