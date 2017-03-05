@@ -30,6 +30,8 @@ for n = 1:iter
             [idx_, dim, t] = axis_aligned(D, data);
         case 'two-pixel'
             [idx_, dim, t] = two_pixel_test(D, data);
+        case 'linear'
+            [idx_, dim, t] = linear_learner(D, data);
     end
     
     % Calculate information gain
@@ -47,9 +49,6 @@ for n = 1:iter
     
 end
 
-if(length(idx(idx_best))==0||length(idx(~idx_best))==0)
-    fprintf('error');
-end
 
 nodeL.idx = idx(idx_best);
 nodeR.idx = idx(~idx_best);
