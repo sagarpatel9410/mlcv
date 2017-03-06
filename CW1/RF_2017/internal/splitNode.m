@@ -22,6 +22,9 @@ data = data(idx,:);
 ig_best = -inf;
 idx_best = [];
 
+% if we wanted to visualise the splits
+% visualise_all_splits;
+
 for n = 1:iter
     
     % Split function - Modify here and try other types of split function
@@ -34,8 +37,12 @@ for n = 1:iter
             [idx_, dim, t] = linear_learner(D, data);
         case 'quad-features'
             [idx_, dim, t] = quad_feature_learner(D, data);
+        case 'quad-features-x-axis-only'
+            [idx_, dim, t] = quad_feature_x_axis_learner(D, data);
         case 'cube-features'
             [idx_, dim, t] = cube_feature_learner(D, data);
+        case 'cube-features-x-axis-only'
+            [idx_, dim, t] = cube_feature_x_axis_learner(D, data);
     end
     
     % Calculate information gain
@@ -67,8 +74,8 @@ end
 
 % Information Gain - the 'purity' of data labels in both child nodes after split. The higher the purer.
 function ig = getIG(data,idx)
-L = data(idx);
-R = data(~idx);
+L = data(idx,:);
+R = data(~idx,:);
 H = getE(data);
 HL = getE(L);
 HR = getE(R);
