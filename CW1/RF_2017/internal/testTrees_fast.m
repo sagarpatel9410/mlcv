@@ -28,8 +28,12 @@ for T = 1:length(tree)
                 idx_left = data(idx{n},1:2)*tree(T).node(n).dim < tree(T).node(n).t;
             case 'quad-features'
                 idx_left = get_quad_features(data(idx{n},1:2))*tree(T).node(n).dim < tree(T).node(n).t;
+            case 'quad-features-x-axis-only'
+                idx_left = get_quad_only_x_axis(data(idx{n},1:2))*tree(T).node(n).dim < tree(T).node(n).t;
             case 'cube-features'
                 idx_left = get_cubic_features(data(idx{n},1:2))*tree(T).node(n).dim < tree(T).node(n).t;
+            case 'cube-features-x-axis-only'
+                idx_left = get_cubic_only_x_axis(data(idx{n},1:2))*tree(T).node(n).dim < tree(T).node(n).t;
         end
         
         idx{n*2} = idx{n}(idx_left');

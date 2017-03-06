@@ -11,7 +11,7 @@ rng(0);
 % Under BSD Licence
 
 % Initialisation
-init;
+% init;
 
 % Select dataset
 [data_train, data_test] = getData('Toy_Spiral'); % {'Toy_Gaussian', 'Toy_Spiral', 'Toy_Circle', 'Caltech'}
@@ -35,7 +35,7 @@ scatter(data_test(:,1),data_test(:,2),'.b');
 % Set the random forest parameters for instance, 
 param.num = 5;         % Number of trees
 param.depth = 5;        % trees depth
-param.splitNum = 10;     % Number of split functions to try
+param.splitNum = 3;     % Number of split functions to try
 param.weakLearner='axis-aligned';
 param.split = 'IG';     % Currently support 'information gain' only
 
