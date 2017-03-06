@@ -23,7 +23,7 @@ for T = 1:length(tree)
             case 'axis-aligned'
                 idx_left = data(idx{n},tree(T).node(n).dim) < tree(T).node(n).t;
             case 'two-pixel'
-                idx_left = data(idx{n},tree(T).node(n).dim(1))-data(idx{n},tree(T).node(n).dim(2)) < tree(T).node(n).t;
+                idx_left = data(idx{n},1)-data(idx{n},2) < tree(T).node(n).t;
             case 'linear'
                 idx_left = data(idx{n},1:2)*tree(T).node(n).dim < tree(T).node(n).t;
             case 'quad-features'

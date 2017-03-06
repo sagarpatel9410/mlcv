@@ -33,10 +33,10 @@ scatter(data_test(:,1),data_test(:,2),'.b');
 
 
 % Set the random forest parameters for instance, 
-param.num = 100;         % Number of trees
+param.num = 5;         % Number of trees
 param.depth = 5;        % trees depth
-param.splitNum = 3;     % Number of split functions to try
-param.weakLearner='quad-features';
+param.splitNum = 10;     % Number of split functions to try
+param.weakLearner='axis-aligned';
 param.split = 'IG';     % Currently support 'information gain' only
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -64,39 +64,42 @@ p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...
 
 plot_toydata(data_test);
 
+% to visual class distributions
+plot_class_distributions(trees);
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % experiment with Caltech101 dataset for image categorisation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-init;
-% Select dataset
-% we do bag-of-words technique to convert images to vectors (histogram of codewords)
-% Set 'showImg' in getData.m to 0 to stop displaying training and testing images and their feature vectors
-[data_train, data_test] = getData('Caltech');
-close all;
-
-% Set the random forest parameters ...
-param.num = 5;         % Number of trees
-param.depth = 5;        % trees depth
-param.splitNum = 3;     % Number of split functions to try
-param.weakLearner='quad-features';
-param.split = 'IG';     % Currently support 'information gain' only
-
-% Train Random Forest ...
-trees = growTrees(data_train,param);
-% Evaluate/Test Random Forest ...
-leaves=testTrees_fast(data_test,trees,param.weakLearner);
-p_rf = trees(1).prob(leaves,:);
-
-p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...
-          sum(reshape(p_rf(:,2),[length(data_test),param.num]),2)...
-          sum(reshape(p_rf(:,3),[length(data_test),param.num]),2)];
-
-[~,rf_classes]=max(p_rf_sum');
-
-% show accuracy and confusion matrix ...
-confus_script;
+% init;
+% % Select dataset
+% % we do bag-of-words technique to convert images to vectors (histogram of codewords)
+% % Set 'showImg' in getData.m to 0 to stop displaying training and testing images and their feature vectors
+% [data_train, data_test] = getData('Caltech');
+% close all;
+% 
+% % Set the random forest parameters ...
+% param.num = 5;         % Number of trees
+% param.depth = 5;        % trees depth
+% param.splitNum = 3;     % Number of split functions to try
+% param.weakLearner='quad-features';
+% param.split = 'IG';     % Currently support 'information gain' only
+% 
+% % Train Random Forest ...
+% trees = growTrees(data_train,param);
+% % Evaluate/Test Random Forest ...
+% leaves=testTrees_fast(data_test,trees,param.weakLearner);
+% p_rf = trees(1).prob(leaves,:);
+% 
+% p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...
+%           sum(reshape(p_rf(:,2),[length(data_test),param.num]),2)...
+%           sum(reshape(p_rf(:,3),[length(data_test),param.num]),2)];
+% 
+% [~,rf_classes]=max(p_rf_sum');
+% 
+% % show accuracy and confusion matrix ...
+% confus_script;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % random forest codebook for Caltech101 image categorisation
