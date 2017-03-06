@@ -1,4 +1,4 @@
-function [ data_train, data_query ] = getData( MODE )
+function [ data_train, data_query, folderName, classList, imgIdx_tr, imgIdx_te] = getData( MODE, imgSel, rf_codebook, numBins, learner)
 % Generate training and testing data
 
 % Data Options:
@@ -79,10 +79,9 @@ switch MODE
         
     case 'Caltech' % Caltech dataset
         close all;
-        imgSel = [15 15]; % randomly select 15 images each class without replacement. (For both training & testing)
         folderName = './Caltech_101/101_ObjectCategories';
         classList = dir(folderName);
-        classList = {classList(3:end).name} % 10 classes
+        classList = {classList(3:end).name}; % 10 classes
         
         disp('Loading training images...')
         % Load Images -> Description (Dense SIFT)
@@ -91,15 +90,20 @@ switch MODE
             figure('Units','normalized','Position',[.05 .1 .4 .9]);
             suptitle('Training image samples');
         end
+        
+        % initialise vector to hold vectors of selected training images
+        imgIdx_tr=zeros(length(classList),imgSel(1));
+        
         for c = 1:length(classList)
             subFolderName = fullfile(folderName,classList{c});
             imgList = dir(fullfile(subFolderName,'*.jpg'));
             imgIdx{c} = randperm(length(imgList));
-            imgIdx_tr = imgIdx{c}(1:imgSel(1));
-            imgIdx_te = imgIdx{c}(imgSel(1)+1:sum(imgSel));
+            
+            % training images index
+            imgIdx_tr(c,:) = imgIdx{c}(1:imgSel(1));
             
             for i = 1:length(imgIdx_tr)
-                I = imread(fullfile(subFolderName,imgList(imgIdx_tr(i)).name));
+                I = imread(fullfile(subFolderName,imgList(imgIdx_tr(c,i)).name));
                 
                 % Visualise
                 if i < 6 & showImg
@@ -117,30 +121,67 @@ switch MODE
                 [~, desc_tr{c,i}] = vl_phow(single(I),'Sizes',PHOW_Sizes,'Step',PHOW_Step); %  extracts PHOW features (multi-scaled Dense SIFT)
             end
         end
-        
-        disp('Building visual codebook...')
-        % Build visual vocabulary (codebook) for 'Bag-of-Words method'
-        desc_sel = single(vl_colsubset(cat(2,desc_tr{:}), 10e4)); % Randomly select 100k SIFT descriptors for clustering
-        
-        % K-means clustering
-        numBins = 256; % for instance,
-        
-        %cluster the descriptors
-        [~,C]=kmeans(desc_sel',numBins); 
-          
-       
-        disp('Encoding Images...')
-        % Vector Quantisation
-        data_train=zeros(length(classList)*15,numBins);
-        
-        %iterate over all the images
-        for i = 1:length(classList)
-            for j = 1:15
-                idx = kmeans(single(desc_tr{i,j}'),numBins,'MaxIter',1,'Start',C,'Distance', 'sqeuclidean');
-                data_train(15*(i-1)+j,1:end)=  histc(idx,1:numBins)./numel(idx);
+        if(~rf_codebook)
+            disp('Building visual codebook using K-means...')
+            % Build visual vocabulary (codebook) for 'Bag-of-Words method'
+            desc_sel = single(vl_colsubset(cat(2,desc_tr{:}), 10e4)); % Randomly select 100k SIFT descriptors for clustering
+            
+            % K-means clustering 
+            [~,C]=kmeans(desc_sel',numBins);    
+
+
+            disp('Encoding Images...')
+            % Vector Quantisation
+            data_train=zeros(length(classList)*imgSel(1),numBins+1);
+            % iterate over all points
+            for i=1:length(classList)
+                for j=1:imgSel(1)
+                    % determine the distribution of centers
+                    idx = kmeans(single(desc_tr{i,j}'),numBins,'MaxIter',1,'Start',C);
+                    % get normalised histograms
+                    data_train(imgSel(1)*(i-1)+j,1:end-1)=histc(idx,1:numBins)./numel(idx);
+                    % append class of training point 
+                    data_train(imgSel(1)*(i-1)+j,end)=i;
+                end
             end
+        else
+            disp('Building visual codebook using Random Forest...')
+            
+            % append the classes to the end of each descriptor
+            for c=1:length(classList)
+                for i=1:imgSel(1)
+                    desc_tr{c,i}=[desc_tr{c,i}; c*ones(1,length(desc_tr{c,i}))];
+                end
+            end
+            
+            % Build visual vocabulary (codebook) for 'Bag-of-Words method'
+            desc_sel = single(vl_colsubset(cat(2,desc_tr{:}), 10e4))'; % Randomly select 100k SIFT descriptors for clustering
+            
+            % train RF using 100k Descriptors
+            param.num = 5;         % Number of trees
+            param.depth = 5;        % trees depth
+            param.splitNum = 3;     % Number of split functions to try
+            param.split = 'IG';     % Currently support 'information gain' only
+            param.weakLearner = learner;
+            
+            trees = growTrees(desc_sel,param);
+            trees = fix_trees(trees);
+            
+            % next generate histograms
+            numLeavesTotal=length(trees(1).prob);
+            data_train=zeros(length(classList)*imgSel(1),numLeavesTotal+1);
+            % iterate over all points
+            for i=1:length(classList)
+                for j=1:imgSel(1)
+                    % for each descriptor, we create the histogram
+                    p_rf=testTrees_fast(single(desc_tr{c,i}(1:end-1,:)'),trees,learner)+1;
+                    data_train(imgSel(1)*(i-1)+j,1:end-1)=histc(reshape(p_rf,1,numel(p_rf)),1:numLeavesTotal)./numel(p_rf);
+                    data_train(imgSel(1)*(i-1)+j,end)=i;
+                end
+            end
+            
         end
-        
+
         % Clear unused varibles to save memory
         clearvars desc_tr desc_sel
 end
@@ -148,19 +189,23 @@ end
 switch MODE
     case 'Caltech'
         if showImg
-        figure('Units','normalized','Position',[.05 .1 .4 .9]);
-        suptitle('Testing image samples');
+            figure('Units','normalized','Position',[.05 .1 .4 .9]);
+            suptitle('Testing image samples');
         end
         disp('Processing testing images...');
         cnt = 1;
+        
+        % initialise vector to hold image index of selected testing images
+        imgIdx_te=zeros(length(classList),imgSel(2));
+
         % Load Images -> Description (Dense SIFT)
         for c = 1:length(classList)
             subFolderName = fullfile(folderName,classList{c});
             imgList = dir(fullfile(subFolderName,'*.jpg'));
-            imgIdx_te = imgIdx{c}(imgSel(1)+1:sum(imgSel));
+            imgIdx_te(c,:) = imgIdx{c}(imgSel(1)+1:sum(imgSel));
             
             for i = 1:length(imgIdx_te)
-                I = imread(fullfile(subFolderName,imgList(imgIdx_te(i)).name));
+                I = imread(fullfile(subFolderName,imgList(imgIdx_te(c,i)).name));
                 
                 % Visualise
                 if i < 6 & showImg
@@ -177,27 +222,40 @@ switch MODE
             
             end
         end
-        suptitle('Testing image samples');
-                if showImg
+        if showImg
             figure('Units','normalized','Position',[.5 .1 .4 .9]);
-        suptitle('Testing image representations: 256-D histograms');
+            suptitle('Testing image representations: 256-D histograms');
         end
 
-        % Quantisation
-        
-        % write your own codes here
-        % ...
-        length_clist = length(classList);
-        data_query=zeros(length_clist * 15, numBins);
-        %iterate over all these points
-        for i=1:length_clist
-                for j=1:15
+        if(~rf_codebook)
+            
+            % Quantisation
+            data_query=zeros(length(classList)*imgSel(2),numBins+1);
+            % iterate over all points
+            for i=1:length(classList)
+                for j=1:imgSel(2)
                     % determine the distribution of centers
-                    idx = kmeans(single(desc_te{i,j}'),numBins,'MaxIter',1,'Start',C,'Distance', 'sqeuclidean');
+                    idx = kmeans(single(desc_te{i,j}'),numBins,'MaxIter',1,'Start',C);
                     % get normalised histograms
-                    data_query(15*(i-1)+j,1:end)=histc(idx,1:numBins)./numel(idx);
+                    data_query(imgSel(2)*(i-1)+j,1:end-1)=histc(idx,1:numBins)./numel(idx);
+                    % append class of training point 
+                    data_query(imgSel(2)*(i-1)+j,end)=i;
                 end
+            end
+        else
+            % next generate histograms
+            data_query=zeros(length(classList)*imgSel(2),numLeavesTotal+1);
+            % iterate over all points
+            for i=1:length(classList)
+                for j=1:imgSel(2)
+                    % for each descriptor, we create the histogram
+                    p_rf=testTrees_fast(single(desc_te{c,i}(1:end,:)'),trees,learner)+1;
+                    data_query(imgSel(2)*(i-1)+j,1:end-1)=histc(reshape(p_rf,1,numel(p_rf)),1:numLeavesTotal)./numel(p_rf);
+                    data_query(imgSel(2)*(i-1)+j,end)=i;
+                end
+            end
         end
+        
         
     otherwise % Dense point for 2D toy data
         xrange = [-1.5 1.5];
