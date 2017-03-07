@@ -1,4 +1,4 @@
-function [ data_train, data_query, folderName, classList, imgIdx_tr, imgIdx_te] = getData( MODE, imgSel, rf_codebook, numBins, learner)
+function [ data_train, data_query, folderName, classList, imgIdx_tr, imgIdx_te] = getData( MODE, imgSel, numDescriptors, rf_codebook, numBins, param)
 % Generate training and testing data
 
 % Data Options:
@@ -124,7 +124,7 @@ switch MODE
         if(~rf_codebook)
             disp('Building visual codebook using K-means...')
             % Build visual vocabulary (codebook) for 'Bag-of-Words method'
-            desc_sel = single(vl_colsubset(cat(2,desc_tr{:}), 10e4)); % Randomly select 100k SIFT descriptors for clustering
+            desc_sel = single(vl_colsubset(cat(2,desc_tr{:}), numDescriptors));
             
             % K-means clustering 
             [~,C]=kmeans(desc_sel',numBins);    
@@ -155,14 +155,7 @@ switch MODE
             end
             
             % Build visual vocabulary (codebook) for 'Bag-of-Words method'
-            desc_sel = single(vl_colsubset(cat(2,desc_tr{:}), 10e4))'; % Randomly select 100k SIFT descriptors for clustering
-            
-            % train RF using 100k Descriptors
-            param.num = 5;         % Number of trees
-            param.depth = 5;        % trees depth
-            param.splitNum = 3;     % Number of split functions to try
-            param.split = 'IG';     % Currently support 'information gain' only
-            param.weakLearner = learner;
+            desc_sel = single(vl_colsubset(cat(2,desc_tr{:}), numDescriptors))';
             
             trees = growTrees(desc_sel,param);
             trees = fix_trees(trees);
@@ -174,7 +167,7 @@ switch MODE
             for c=1:length(classList)
                 for i=1:imgSel(1)
                     % for each descriptor, we create the histogram
-                    leaves=testTrees_fast(single(desc_tr{c,i}(1:end,:)'),trees,learner)+1;
+                    leaves=testTrees_fast(single(desc_tr{c,i}(1:end,:)'),trees,param.weakLearner)+1;
                     data_train(imgSel(1)*(c-1)+i,1:end-1)=histc(reshape(leaves,1,numel(leaves)),1:numLeavesTotal)./numel(leaves);
                     data_train(imgSel(1)*(c-1)+i,end)=c;
                 end
@@ -249,7 +242,8 @@ switch MODE
             for c=1:length(classList)
                 for i=1:imgSel(2)
                     % for each descriptor, we create the histogram
-                    leaves=testTrees_fast(single(desc_te{c,i}(1:end,:)'),trees,learner)+1;
+                    current_desc=[single(desc_te{c,i}(1:end,:)') zeros(size(desc_te{c,i},2),1)];
+                    leaves=testTrees_fast(current_desc,trees,param.weakLearner)+1;
                     data_query(imgSel(2)*(c-1)+i,1:end-1)=histc(reshape(leaves,1,numel(leaves)),1:numLeavesTotal)./numel(leaves);
                     data_query(imgSel(2)*(c-1)+i,end)=c;
                 end

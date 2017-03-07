@@ -45,10 +45,6 @@ for n = 1:iter
             [idx_, dim, t] = cube_feature_x_axis_learner(D, data);
     end
     
-    if(length(data(idx_))==length(idx))
-        fprintf('ERROR\n');
-    end
-    
     % Calculate information gain
     % Based on the split that was performed
     ig = getIG(data,idx_);
@@ -89,6 +85,7 @@ end
 % Entropy
 function H = getE(X)
 cdist= histc(X(:,1:end), unique(X(:,end))) + 1;
+cdist= cdist(:,end);
 cdist= cdist/sum(cdist);
 cdist= cdist .* log(cdist);
 H = -sum(cdist);
