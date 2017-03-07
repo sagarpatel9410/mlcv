@@ -137,7 +137,7 @@ switch MODE
             for i=1:length(classList)
                 for j=1:imgSel(1)
                     % determine the distribution of centers
-                    idx = kmeans(single(desc_tr{i,j}'),numBins,'MaxIter',1,'Start',C);
+                    idx = knnsearch(C,single(desc_tr{i,j})');
                     % get normalised histograms
                     data_train(imgSel(1)*(i-1)+j,1:end-1)=histc(idx,1:numBins)./numel(idx);
                     % append class of training point 
@@ -228,7 +228,7 @@ switch MODE
             for i=1:length(classList)
                 for j=1:imgSel(2)
                     % determine the distribution of centers
-                    idx = kmeans(single(desc_te{i,j}'),numBins,'MaxIter',1,'Start',C);
+                    idx = knnsearch(C,single(desc_te{i,j})');
                     % get normalised histograms
                     data_query(imgSel(2)*(i-1)+j,1:end-1)=histc(idx,1:numBins)./numel(idx);
                     % append class of training point 

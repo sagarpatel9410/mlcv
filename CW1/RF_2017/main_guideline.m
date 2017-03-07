@@ -17,7 +17,7 @@ warning('off', 'MATLAB:rankDeficientMatrix');
 % experiment with Toy_Spiral dataset for classification
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Initialisation
-% init;
+init;
 
 % Select dataset
 [data_train, data_test] = getData('Toy_Spiral'); % {'Toy_Gaussian', 'Toy_Spiral', 'Toy_Circle', 'Caltech'}
@@ -76,12 +76,12 @@ plot_toydata(data_test);
 % experiment with Caltech101 dataset for image categorisation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% init;
+init;
 
 % Using rf-codebook or k - means
 % rf_codebook=0 : k-means
 % rf_codebook=1 : rf
-rf_codebook=1;
+rf_codebook=0;
 
 % number of descriptors to use
 numDescriptors=10e4;
