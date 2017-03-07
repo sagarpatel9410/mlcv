@@ -171,12 +171,12 @@ switch MODE
             numLeavesTotal=length(trees(1).prob);
             data_train=zeros(length(classList)*imgSel(1),numLeavesTotal+1);
             % iterate over all points
-            for i=1:length(classList)
-                for j=1:imgSel(1)
+            for c=1:length(classList)
+                for i=1:imgSel(1)
                     % for each descriptor, we create the histogram
-                    p_rf=testTrees_fast(single(desc_tr{c,i}(1:end-1,:)'),trees,learner)+1;
-                    data_train(imgSel(1)*(i-1)+j,1:end-1)=histc(reshape(p_rf,1,numel(p_rf)),1:numLeavesTotal)./numel(p_rf);
-                    data_train(imgSel(1)*(i-1)+j,end)=i;
+                    leaves=testTrees_fast(single(desc_tr{c,i}(1:end,:)'),trees,learner)+1;
+                    data_train(imgSel(1)*(c-1)+i,1:end-1)=histc(reshape(leaves,1,numel(leaves)),1:numLeavesTotal)./numel(leaves);
+                    data_train(imgSel(1)*(c-1)+i,end)=c;
                 end
             end
             
@@ -246,12 +246,12 @@ switch MODE
             % next generate histograms
             data_query=zeros(length(classList)*imgSel(2),numLeavesTotal+1);
             % iterate over all points
-            for i=1:length(classList)
-                for j=1:imgSel(2)
+            for c=1:length(classList)
+                for i=1:imgSel(2)
                     % for each descriptor, we create the histogram
-                    p_rf=testTrees_fast(single(desc_te{c,i}(1:end,:)'),trees,learner)+1;
-                    data_query(imgSel(2)*(i-1)+j,1:end-1)=histc(reshape(p_rf,1,numel(p_rf)),1:numLeavesTotal)./numel(p_rf);
-                    data_query(imgSel(2)*(i-1)+j,end)=i;
+                    leaves=testTrees_fast(single(desc_te{c,i}(1:end,:)'),trees,learner)+1;
+                    data_query(imgSel(2)*(c-1)+i,1:end-1)=histc(reshape(leaves,1,numel(leaves)),1:numLeavesTotal)./numel(leaves);
+                    data_query(imgSel(2)*(c-1)+i,end)=c;
                 end
             end
         end

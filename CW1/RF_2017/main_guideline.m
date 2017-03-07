@@ -6,65 +6,65 @@
 % The codes are made for educational purposes only.
 % Some parts are inspired by Karpathy's RF Toolbox
 
-rng(0);
-
-% Under BSD Licence
-
-% Initialisation
-% init;
-
-% Select dataset
-[data_train, data_test] = getData('Toy_Spiral'); % {'Toy_Gaussian', 'Toy_Spiral', 'Toy_Circle', 'Caltech'}
-
-
-% for loop to iterate over all the types of split functions
-%%%%%%%%%%%%%
-% check the training and testing data
-    % data_train(:,1:2) : [num_data x dim] Training 2D vectors
-    % data_train(:,3) : [num_data x 1] Labels of training data, {1,2,3}
-    
-plot_toydata(data_train);
-
-    % data_test(:,1:2) : [num_data x dim] Testing 2D vectors, 2D points in the
-    % uniform dense grid within the range of [-1.5, 1.5]
-    % data_train(:,3) : N/A
-    
-scatter(data_test(:,1),data_test(:,2),'.b');
-
-
-% Set the random forest parameters for instance, 
-param.num = 5;         % Number of trees
-param.depth = 5;        % trees depth
-param.splitNum = 3;     % Number of split functions to try
-param.weakLearner='axis-aligned';
-param.split = 'IG';     % Currently support 'information gain' only
-
-%%%%%%%%%%%%%%%%%%%%%%
-% Train Random Forest
-
-% Grow all trees
-trees = growTrees(data_train,param);
-trees=fix_trees(trees);
-
-%%%%%%%%%%%%%%%%%%%%%%
-% Evaluate/Test Random Forest
-%increment each cell in leaves by 1
-leaves=testTrees_fast(data_test,trees,param.weakLearner) + 1;
-
-%append new row to prob
-p_rf = trees(1).prob(leaves,:);
-
-% get the probabilities of the each class
-p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...
-          sum(reshape(p_rf(:,2),[length(data_test),param.num]),2)...
-          sum(reshape(p_rf(:,3),[length(data_test),param.num]),2)];
-
-[~,data_test(:,3)]=max(p_rf_sum');
-
-plot_toydata(data_test);
-
-% to visual class distributions
-% plot_class_distributions(trees);
+rng(1);
+% 
+% % Under BSD Licence
+% 
+% % Initialisation
+% % init;
+% 
+% % Select dataset
+% [data_train, data_test] = getData('Toy_Spiral'); % {'Toy_Gaussian', 'Toy_Spiral', 'Toy_Circle', 'Caltech'}
+% 
+% 
+% % for loop to iterate over all the types of split functions
+% %%%%%%%%%%%%%
+% % check the training and testing data
+%     % data_train(:,1:2) : [num_data x dim] Training 2D vectors
+%     % data_train(:,3) : [num_data x 1] Labels of training data, {1,2,3}
+%     
+% plot_toydata(data_train);
+% 
+%     % data_test(:,1:2) : [num_data x dim] Testing 2D vectors, 2D points in the
+%     % uniform dense grid within the range of [-1.5, 1.5]
+%     % data_train(:,3) : N/A
+%     
+% scatter(data_test(:,1),data_test(:,2),'.b');
+% 
+% 
+% % Set the random forest parameters for instance, 
+% param.num = 5;         % Number of trees
+% param.depth = 5;        % trees depth
+% param.splitNum = 3;     % Number of split functions to try
+% param.weakLearner='axis-aligned';
+% param.split = 'IG';     % Currently support 'information gain' only
+% 
+% %%%%%%%%%%%%%%%%%%%%%%
+% % Train Random Forest
+% 
+% % Grow all trees
+% trees = growTrees(data_train,param);
+% trees=fix_trees(trees);
+% 
+% %%%%%%%%%%%%%%%%%%%%%%
+% % Evaluate/Test Random Forest
+% %increment each cell in leaves by 1
+% leaves=testTrees_fast(data_test,trees,param.weakLearner) + 1;
+% 
+% %append new row to prob
+% p_rf = trees(1).prob(leaves,:);
+% 
+% % get the probabilities of the each class
+% p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...
+%           sum(reshape(p_rf(:,2),[length(data_test),param.num]),2)...
+%           sum(reshape(p_rf(:,3),[length(data_test),param.num]),2)];
+% 
+% [~,data_test(:,3)]=max(p_rf_sum');
+% 
+% plot_toydata(data_test);
+% 
+% % to visual class distributions
+% % plot_class_distributions(trees);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % experiment with Caltech101 dataset for image categorisation
@@ -75,7 +75,7 @@ plot_toydata(data_test);
 % Using rf-codebook or k - means
 % rf_codebook=0 : k-means
 % rf_codebook=1 : rf
-rf_codebook=0;
+rf_codebook=1;
 
 % If using rf codebook, idenfity the weak learner type
 learner='axis-aligned';
@@ -114,8 +114,8 @@ end
 confus_script;
 
 % plotting of correctly and wrongly classified data 
-num_plot=5;
-misclassified_plotting;
-num_plot=5;
-correctlyclassified_plotting;
+% num_plot=5;
+% misclassified_plotting;
+% num_plot=5;
+% correctlyclassified_plotting;
 
