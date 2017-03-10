@@ -118,7 +118,7 @@ switch MODE
                 end
                 
                 % For details of image description, see http://www.vlfeat.org/matlab/vl_phow.html
-                [~, desc_tr{c,i}] = vl_phow(single(I),'Sizes',PHOW_Sizes,'Step',PHOW_Step); %  extracts PHOW features (multi-scaled Dense SIFT)
+                [frames{c,i}, desc_tr{c,i}] = vl_phow(single(I),'Sizes',PHOW_Sizes,'Step',PHOW_Step); %  extracts PHOW features (multi-scaled Dense SIFT)
             end
         end
         if(~rf_codebook)
