@@ -6,3 +6,6 @@ conf = vl_binsum(conf, ones(size(idx)), idx) ;
 
 imagesc(conf) ;
 title(sprintf('Confusion matrix (%.2f %% accuracy)', 100 * accuracy_rf) ) ;
+
+save(filename, 'accuracy_rf', 'buildCodebookTime', 'buildRFTime', 'evaluateTreeTime');
+savefig(filename_fig)

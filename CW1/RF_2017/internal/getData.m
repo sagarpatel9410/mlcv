@@ -1,4 +1,4 @@
-function [ data_train, data_query, folderName, classList, imgIdx_tr, imgIdx_te] = getData( MODE, imgSel, numDescriptors, rf_codebook, numBins, param)
+function [ data_train, data_query, classList, imgIdx_tr, imgIdx_te] = getData( MODE, imgSel, numDescriptors, rf_codebook, numBins, param)
 % Generate training and testing data
 
 % Data Options:
@@ -80,7 +80,7 @@ switch MODE
     case 'Caltech' % Caltech dataset
         close all;
         folderName = './Caltech_101/101_ObjectCategories';
-        classList = dir(folderName);
+        classList = dir(folderName); 
         classList = {classList(3:end).name}; % 10 classes
         
         disp('Loading training images...')
@@ -118,14 +118,14 @@ switch MODE
                 end
                 
                 % For details of image description, see http://www.vlfeat.org/matlab/vl_phow.html
-                [frames{c,i}, desc_tr{c,i}] = vl_phow(single(I),'Sizes',PHOW_Sizes,'Step',PHOW_Step); %  extracts PHOW features (multi-scaled Dense SIFT)
+                [~, desc_tr{c,i}] = vl_phow(single(I),'Sizes',PHOW_Sizes,'Step',PHOW_Step); %  extracts PHOW features (multi-scaled Dense SIFT)
             end
         end
+
         if(~rf_codebook)
             disp('Building visual codebook using K-means...')
             % Build visual vocabulary (codebook) for 'Bag-of-Words method'
             desc_sel = single(vl_colsubset(cat(2,desc_tr{:}), numDescriptors));
-            
             % K-means clustering 
             [~,C]=kmeans(desc_sel',numBins);    
 
@@ -187,7 +187,7 @@ switch MODE
         end
         disp('Processing testing images...');
         cnt = 1;
-        
+                
         % initialise vector to hold image index of selected testing images
         imgIdx_te=zeros(length(classList),imgSel(2));
 

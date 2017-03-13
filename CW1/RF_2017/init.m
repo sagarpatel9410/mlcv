@@ -1,6 +1,6 @@
 % Please run this script under the root folder
 
-clearvars -except N;
+% clearvars -except N ;
 close all;
 
 % addpaths
