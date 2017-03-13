@@ -23,5 +23,20 @@ else
         dim='cubic';
         plot(x,y,'r', 'LineWidth', 2.5);
         title(sprintf('Cube: IG = %4.2f',ig_best),'FontSize', 20);
+    elseif(length(dim)==5)
+        str=sprintf('%.3f*x + %.3f*y + %.3f*x.*y + %.3f*x.^2 + %.3f*y.^2 = %.3f',dim(1),dim(2),dim(3),dim(4),dim(5),t);
+        dim='quadratic';
+        h=ezplot(str,[-1.5 1.5 -1.5 1.5]);
+        h.LineWidth=2.5;
+        h.LineColor='r';
+        title(sprintf('Quad: IG = %4.2f',ig_best),'FontSize', 20);
+    elseif(length(dim)==9)
+        str=sprintf('%.3f*x + %.3f*y + %.3f*x.*y + %.3f*x.^2 + %.3f*y.^2 + %.3f*x.^2.*y + %.3f*x.*y.^2 + %.3f*x.^3 + %.3f*y.^3 = %.3f',dim(1),dim(2),dim(3),dim(4),dim(5),dim(6),dim(7),dim(8),dim(9),t);
+        dim='cubic';
+        h=ezplot(str,[-1.5 1.5 -1.5 1.5]);
+        h.LineWidth=2.5;
+        h.LineColor='r';        
+        title(sprintf('Cube: IG = %4.2f',ig_best),'FontSize', 20);
     end
 end
+

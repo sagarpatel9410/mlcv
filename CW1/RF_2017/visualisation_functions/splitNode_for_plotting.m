@@ -31,8 +31,8 @@ for n = 1:iter
     % Split function - Modify here and try other types of split function
     [aa_idx_, aa_dim, aa_t] = axis_aligned(D, data);
     [lin_idx_, lin_dim, lin_t] = linear_learner(D, data);
-    [quad_idx_, quad_dim, quad_t] = quad_feature_x_axis_learner(D, data);
-    [cube_idx_, cube_dim, cube_t] = cube_feature_x_axis_learner(D, data);
+    [quad_idx_, quad_dim, quad_t] = quad_feature_learner(D, data);
+    [cube_idx_, cube_dim, cube_t] = cube_feature_learner(D, data);
     
     % Calculate information gain
     % Based on the split that was performed
