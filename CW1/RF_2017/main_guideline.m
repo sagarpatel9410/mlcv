@@ -17,7 +17,7 @@ warning('off', 'MATLAB:rankDeficientMatrix');
 % experiment with Toy_Spiral dataset for classification
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Initialisation
-init;
+% init;
 
 % Select dataset
 [data_train, data_test] = getData('Toy_Spiral'); % {'Toy_Gaussian', 'Toy_Spiral', 'Toy_Circle', 'Caltech'}
@@ -42,7 +42,7 @@ scatter(data_test(:,1),data_test(:,2),'.b');
 param.num = 100;         % Number of trees
 param.depth = 5;        % trees depth
 param.splitNum = 3;     % Number of split functions to try
-param.weakLearner='cube-features';
+param.weakLearner='cube-features-x-axis-only';
 param.split = 'IG';     % Currently support 'information gain' only
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -76,7 +76,7 @@ plot_toydata(data_test);
 % experiment with Caltech101 dataset for image categorisation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-init;
+% init;
 
 % Using rf-codebook or k - means
 % rf_codebook=0 : k-means
@@ -87,14 +87,14 @@ rf_codebook=0;
 numDescriptors=10e4;
 
 % If using rf codebook, describe parameters
-param.num = 5;         % Number of trees
+param.num = 50;         % Number of trees
 param.depth = 5;        % trees depth
 param.splitNum = 5;     % Number of split functions to try
 param.split = 'IG';     % Currently support 'information gain' only
 param.weakLearner = 'two-pixel';
 
 % If using K-means, define number of bins
-numBins=256;
+numBins=1024;
 
 % define number of training and testing images
 % first index represents training, second index represents testing

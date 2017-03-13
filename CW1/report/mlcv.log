@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.21)  6 MAR 2017 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.21)  13 MAR 2017 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -251,7 +251,11 @@ Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 14.
 Class revtex4-1 Info: cite was not loaded (OK!) on input line 14.
 Class revtex4-1 Info: mcite was not loaded (OK!) on input line 14.
 Class revtex4-1 Info: multicol was not loaded (OK!) on input line 14.
-(./mlcv.aux)
+(./mlcv.aux
+
+LaTeX Warning: Label `fig:spec_sub_overview' multiply defined.
+
+)
 \openout1 = `mlcv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -266,8 +270,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
-
-(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
 \scratchdimen=\dimen118
@@ -334,67 +337,138 @@ e
 
 Class revtex4-1 Warning: Assuming \noaffiliation for authors.
 
-Package epstopdf Info: Source file: <images/split_function_visualitions.eps>
-(epstopdf)                    date: 2017-03-06 15:53:20
-(epstopdf)                    size: 921390 bytes
-(epstopdf)             Output file: <images/split_function_visualitions-eps-con
-verted-to.pdf>
-(epstopdf)                    date: 2017-03-06 15:53:52
-(epstopdf)                    size: 198937 bytes
+Package epstopdf Info: Source file: <images/split_function_visualitions_1.eps>
+(epstopdf)                    date: 2017-03-13 11:45:16
+(epstopdf)                    size: 1025238 bytes
+(epstopdf)             Output file: <images/split_function_visualitions_1-eps-c
+onverted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
-alitions-eps-converted-to.pdf images/split_function_visualitions.eps>
+alitions_1-eps-converted-to.pdf images/split_function_visualitions_1.eps>
 (epstopdf)             \includegraphics on input line 24.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=images/split_function_visualitions_1-eps-converte
+d-to.pdf images/split_function_visualitions_1.eps)...executed safely (allowed).
 
-<images/split_function_visualitions-eps-converted-to.pdf, id=1, 801.99625pt x 8
-48.16875pt>
-File: images/split_function_visualitions-eps-converted-to.pdf Graphic file (typ
-e pdf)
- <use images/split_function_visualitions-eps-converted-to.pdf>
-Package pdftex.def Info: images/split_function_visualitions-eps-converted-to.pd
-f used on input line 24.
-(pdftex.def)             Requested size: 246.0pt x 260.16pt.
+Package epstopdf Info: Result file: <images/split_function_visualitions_1-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2017-03-13 11:47:56
+(epstopdf)                    size: 216078 bytes.
+
+<images/split_function_visualitions_1-eps-converted-to.pdf, id=1, 801.99625pt x
+ 848.16875pt>
+File: images/split_function_visualitions_1-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use images/split_function_visualitions_1-eps-converted-to.pdf>
+Package pdftex.def Info: images/split_function_visualitions_1-eps-converted-to.
+pdf used on input line 24.
+(pdftex.def)             Requested size: 120.54135pt x 127.47865pt.
+Package epstopdf Info: Source file: <images/split_function_visualitions_2.eps>
+(epstopdf)                    date: 2017-03-13 11:46:19
+(epstopdf)                    size: 153484 bytes
+(epstopdf)             Output file: <images/split_function_visualitions_2-eps-c
+onverted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
+alitions_2-eps-converted-to.pdf images/split_function_visualitions_2.eps>
+(epstopdf)             \includegraphics on input line 25.
+runsystem(repstopdf --outfile=images/split_function_visualitions_2-eps-converte
+d-to.pdf images/split_function_visualitions_2.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <images/split_function_visualitions_2-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2017-03-13 11:47:57
+(epstopdf)                    size: 33152 bytes.
+
+<images/split_function_visualitions_2-eps-converted-to.pdf, id=2, 801.99625pt x
+ 848.16875pt>
+File: images/split_function_visualitions_2-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use images/split_function_visualitions_2-eps-converted-to.pdf>
+Package pdftex.def Info: images/split_function_visualitions_2-eps-converted-to.
+pdf used on input line 25.
+(pdftex.def)             Requested size: 120.54135pt x 127.47865pt.
+Package epstopdf Info: Source file: <images/split_function_visualitions_3.eps>
+(epstopdf)                    date: 2017-03-13 11:47:06
+(epstopdf)                    size: 224249 bytes
+(epstopdf)             Output file: <images/split_function_visualitions_3-eps-c
+onverted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
+alitions_3-eps-converted-to.pdf images/split_function_visualitions_3.eps>
+(epstopdf)             \includegraphics on input line 31.
+runsystem(repstopdf --outfile=images/split_function_visualitions_3-eps-converte
+d-to.pdf images/split_function_visualitions_3.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <images/split_function_visualitions_3-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2017-03-13 11:47:58
+(epstopdf)                    size: 51198 bytes.
+
+<images/split_function_visualitions_3-eps-converted-to.pdf, id=3, 801.99625pt x
+ 848.16875pt>
+File: images/split_function_visualitions_3-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use images/split_function_visualitions_3-eps-converted-to.pdf>
+Package pdftex.def Info: images/split_function_visualitions_3-eps-converted-to.
+pdf used on input line 31.
+(pdftex.def)             Requested size: 120.54135pt x 127.47865pt.
+Package epstopdf Info: Source file: <images/split_function_visualitions_4.eps>
+(epstopdf)                    date: 2017-03-13 11:47:35
+(epstopdf)                    size: 352409 bytes
+(epstopdf)             Output file: <images/split_function_visualitions_4-eps-c
+onverted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
+alitions_4-eps-converted-to.pdf images/split_function_visualitions_4.eps>
+(epstopdf)             \includegraphics on input line 32.
+runsystem(repstopdf --outfile=images/split_function_visualitions_4-eps-converte
+d-to.pdf images/split_function_visualitions_4.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <images/split_function_visualitions_4-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2017-03-13 11:47:58
+(epstopdf)                    size: 80948 bytes.
+
+<images/split_function_visualitions_4-eps-converted-to.pdf, id=4, 801.99625pt x
+ 848.16875pt>
+File: images/split_function_visualitions_4-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use images/split_function_visualitions_4-eps-converted-to.pdf>
+Package pdftex.def Info: images/split_function_visualitions_4-eps-converted-to.
+pdf used on input line 32.
+(pdftex.def)             Requested size: 120.54135pt x 127.47865pt.
 Package epstopdf Info: Source file: <images/leaf_node_distributions.eps>
 (epstopdf)                    date: 2017-03-06 15:57:41
 (epstopdf)                    size: 86712 bytes
 (epstopdf)             Output file: <images/leaf_node_distributions-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2017-03-06 15:48:19
-(epstopdf)                    size: 198614 bytes
+(epstopdf)                    date: 2017-03-06 15:58:05
+(epstopdf)                    size: 12339 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/leaf_node_distribut
 ions-eps-converted-to.pdf images/leaf_node_distributions.eps>
-(epstopdf)             \includegraphics on input line 30.
-runsystem(repstopdf --outfile=images/leaf_node_distributions-eps-converted-to.p
-df images/leaf_node_distributions.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 38.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <images/leaf_node_distributions-eps-convert
-ed-to.pdf>
-(epstopdf)                    date: 2017-03-06 15:58:05
-(epstopdf)                    size: 12339 bytes.
-
-<images/leaf_node_distributions-eps-converted-to.pdf, id=2, 796.9775pt x 629.35
+<images/leaf_node_distributions-eps-converted-to.pdf, id=5, 796.9775pt x 629.35
 126pt>
 File: images/leaf_node_distributions-eps-converted-to.pdf Graphic file (type pd
 f)
  <use images/leaf_node_distributions-eps-converted-to.pdf>
 Package pdftex.def Info: images/leaf_node_distributions-eps-converted-to.pdf us
-ed on input line 30.
+ed on input line 38.
 (pdftex.def)             Requested size: 246.0pt x 194.2518pt.
 
 No file mlcv.bbl.
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ima
-ges/split_function_visualitions-eps-converted-to.pdf> <./images/leaf_node_distr
-ibutions-eps-converted-to.pdf>] (./mlcv.aux)
+ges/split_function_visualitions_1-eps-converted-to.pdf> <./images/split_functio
+n_visualitions_2-eps-converted-to.pdf> <./images/split_function_visualitions_3-
+eps-converted-to.pdf> <./images/split_function_visualitions_4-eps-converted-to.
+pdf> <./images/leaf_node_distributions-eps-converted-to.pdf>] (./mlcv.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5410 strings out of 493014
- 74268 string characters out of 6133351
- 150478 words of memory out of 5000000
- 8882 multiletter control sequences out of 15000+600000
+ 5425 strings out of 493014
+ 75118 string characters out of 6133351
+ 150517 words of memory out of 5000000
+ 8894 multiletter control sequences out of 15000+600000
  5505 words of font info for 20 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,5n,32p,554b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -403,10 +477,10 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
 usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
 r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on mlcv.pdf (1 page, 272104 bytes).
+Output written on mlcv.pdf (1 page, 444345 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
