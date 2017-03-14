@@ -38,9 +38,9 @@ warning('off', 'MATLAB:rankDeficientMatrix');
 % scatter(data_test(:,1),data_test(:,2),'.b');
 
 % Set the random forest parameters for instance, 
-param.num = 100;         % Number of trees
+param.num = 150;         % Number of trees
 param.depth = 7;        % trees depth
-param.splitNum = 3;     % Number of split functions to try
+param.splitNum = 10;     % Number of split functions to try
 param.weakLearner='linear';
 param.split = 'IG';     % Currently support 'information gain' only
 
@@ -54,6 +54,7 @@ trees=fix_trees(trees);
 %%%%%%%%%%%%%%%%%%%%%%
 % Evaluate/Test Random Forest
 %increment each cell in leaves by 1
+% data_test = [-.5 -.7; .4 .3; -.7 .4; .5 -.5];
 leaves=testTrees_fast(data_test,trees,param.weakLearner) + 1;
 
 %append new row to prob
@@ -62,7 +63,10 @@ p_rf = trees(1).prob(leaves,:);
 % get the probabilities of the each class
 p_rf_sum=[sum(reshape(p_rf(:,1),[length(data_test),param.num]),2)...
           sum(reshape(p_rf(:,2),[length(data_test),param.num]),2)...
-          sum(reshape(p_rf(:,3),[length(data_test),param.num]),2)];
+          sum(reshape(p_rf(:,3),[length(data_test),param.num]),2)]./param.num;
+
+% plot averages
+% test_points_leaves(p_rf, p_rf_sum);
 
 [~,data_test(:,3)]=max(p_rf_sum');
 

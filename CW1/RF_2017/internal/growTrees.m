@@ -36,7 +36,7 @@ for T = 1:param.num
     % Split Nodes - [2^(param.depth-1)-1] all nodes bar leaves
     for n = 1:2^(param.depth-1)-1
         % split node will output the root node, the left and right notes
-        [tree(T).node(n),tree(T).node(n*2),tree(T).node(n*2+1)] = splitNode_for_plotting(data,tree(T).node(n),param);
+        [tree(T).node(n),tree(T).node(n*2),tree(T).node(n*2+1)] = splitNode(data,tree(T).node(n),param);
     end
     
     % Leaf Nodes

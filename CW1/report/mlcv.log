@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.21)  13 MAR 2017 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.21)  14 MAR 2017 07:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -270,6 +270,244 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/capt-of/capt-of.sty
 Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2016/05/18 v6512 L3 programming layer (loader) 
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2016/05/18 v6512 L3 programming layer (code)
+L3 Module: l3bootstrap 2016/02/12 v6412 L3 Bootstrap code
+L3 Module: l3names 2016/03/11 v6433 L3 Namespace for primitives
+L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
+L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
+L3 Module: l3tl 2016/03/26 v6465 L3 Token lists
+L3 Module: l3str 2016/03/24 v6441 L3 Strings
+L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
+L3 Module: l3int 2016/03/24 v6441 L3 Integers
+\c_max_int=\count120
+\l_tmpa_int=\count121
+\l_tmpb_int=\count122
+\g_tmpa_int=\count123
+\g_tmpb_int=\count124
+L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
+L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
+\g__prg_map_int=\count125
+L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
+L3 Module: l3token 2016/04/03 v6470 L3 Experimental token manipulation
+L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
+L3 Module: l3msg 2016/03/26 v6464 L3 Messages
+L3 Module: l3file 2016/03/25 v6458 L3 File and I/O operations
+\l_iow_line_count_int=\count126
+\l__iow_target_count_int=\count127
+\l__iow_current_line_int=\count128
+\l__iow_current_word_int=\count129
+\l__iow_current_indentation_int=\count130
+L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
+\c_zero_dim=\dimen126
+\c_max_dim=\dimen127
+\l_tmpa_dim=\dimen128
+\l_tmpb_dim=\dimen129
+\g_tmpa_dim=\dimen130
+\g_tmpb_dim=\dimen131
+\c_zero_skip=\skip52
+\c_max_skip=\skip53
+\l_tmpa_skip=\skip54
+\l_tmpb_skip=\skip55
+\g_tmpa_skip=\skip56
+\g_tmpb_skip=\skip57
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
+\g__keyval_level_int=\count131
+\l_keys_choice_int=\count132
+L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
+\c__fp_leading_shift_int=\count133
+\c__fp_middle_shift_int=\count134
+\c__fp_trailing_shift_int=\count135
+\c__fp_big_leading_shift_int=\count136
+\c__fp_big_middle_shift_int=\count137
+\c__fp_big_trailing_shift_int=\count138
+\c__fp_Bigg_leading_shift_int=\count139
+\c__fp_Bigg_middle_shift_int=\count140
+\c__fp_Bigg_trailing_shift_int=\count141
+L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
+\c_empty_box=\box47
+\l_tmpa_box=\box48
+\l_tmpb_box=\box49
+\g_tmpa_box=\box50
+\g_tmpb_box=\box51
+L3 Module: l3coffins 2016/05/17 v6508 L3 Coffin code layer
+\l__coffin_internal_box=\box52
+\l__coffin_internal_dim=\dimen132
+\l__coffin_offset_x_dim=\dimen133
+\l__coffin_offset_y_dim=\dimen134
+\l__coffin_x_dim=\dimen135
+\l__coffin_y_dim=\dimen136
+\l__coffin_x_prime_dim=\dimen137
+\l__coffin_y_prime_dim=\dimen138
+\c_empty_coffin=\box53
+\l__coffin_aligned_coffin=\box54
+\l__coffin_aligned_internal_coffin=\box55
+\l_tmpa_coffin=\box56
+\l_tmpb_coffin=\box57
+\l__coffin_display_coffin=\box58
+\l__coffin_display_coord_coffin=\box59
+\l__coffin_display_pole_coffin=\box60
+\l__coffin_display_offset_dim=\dimen139
+\l__coffin_display_x_dim=\dimen140
+\l__coffin_display_y_dim=\dimen141
+L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
+L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
+L3 Module: l3candidates 2016/05/13 v6484 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen142
+\l__box_bottom_dim=\dimen143
+\l__box_left_dim=\dimen144
+\l__box_right_dim=\dimen145
+\l__box_top_new_dim=\dimen146
+\l__box_bottom_new_dim=\dimen147
+\l__box_left_new_dim=\dimen148
+\l__box_right_new_dim=\dimen149
+\l__box_internal_box=\box61
+\l__coffin_bounding_shift_dim=\dimen150
+\l__coffin_left_corner_dim=\dimen151
+\l__coffin_right_corner_dim=\dimen152
+\l__coffin_bottom_corner_dim=\dimen153
+\l__coffin_top_corner_dim=\dimen154
+\l__coffin_scaled_total_height_dim=\dimen155
+\l__coffin_scaled_width_dim=\dimen156
+L3 Module: l3luatex 2016/03/26 v6465 L3 Experimental LuaTeX-specific functions
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count142
+\l__driver_tmp_box=\box62
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2016/05/18 v6512 LaTeX2e option processing using LaTeX3 keys
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2016/05/18 v6512 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count143
+\l__xparse_m_args_int=\count144
+\l__xparse_mandatory_args_int=\count145
+\l__xparse_processor_int=\count146
+\l__xparse_v_nesting_int=\count147
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.st
+y
+Package: xtemplate 2016/05/18 v6512 L3 Experimental prototype document function
+s
+\l__xtemplate_tmp_dim=\dimen157
+\l__xtemplate_tmp_int=\count148
+\l__xtemplate_tmp_muskip=\muskip18
+\l__xtemplate_tmp_skip=\skip58
+)
+Package: xfrac 2016/05/18 v6512 L3 Experimental split-level fractions
+\l__xfrac_slash_box=\box63
+\l__xfrac_tmp_box=\box64
+\l__xfrac_denominator_bot_sep_dim=\dimen158
+\l__xfrac_numerator_bot_sep_dim=\dimen159
+\l__xfrac_numerator_top_sep_dim=\dimen160
+\l__xfrac_slash_left_sep_dim=\dimen161
+\l__xfrac_slash_right_sep_dim=\dimen162
+\l__xfrac_slash_left_muskip=\muskip19
+\l__xfrac_slash_right_muskip=\muskip20
+.................................................
+. xtemplate info: "declare-object-type"
+. 
+. Declaring object type 'xfrac' taking 3 argument(s) on line 111.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \sfrac with sig. 'omom' on line 451.
+.................................................
+)
 
 Package geometry Warning: Over-specification in `h'-direction.
     `width' (483.69684pt) is ignored.
@@ -278,37 +516,40 @@ Package geometry Warning: Over-specification in `h'-direction.
 Package geometry Warning: Over-specification in `v'-direction.
     `height' (731.23582pt) is ignored.
 
-Class revtex4-1 Info: Patching LaTeX tabular. on input line 24.
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 25.
 
 Class revtex4-1 Warning: Repair the float package.
 
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 24.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 25.
 
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 24.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 24.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 24.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 25.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 25.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 25.
 (./mlcv.aux
 
-LaTeX Warning: Label `fig:spec_sub_overview' multiply defined.
-
-
-LaTeX Warning: Label `fig:spec_sub_overview' multiply defined.
+LaTeX Warning: Label `fig:leaf_nodes' multiply defined.
 
 )
 \openout1 = `mlcv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 25.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 25.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -346,16 +587,16 @@ LaTeX Font Info:    ... okay on input line 24.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
-\scratchdimen=\dimen126
-\scratchbox=\box47
-\nofMPsegments=\count121
-\nofMParguments=\count122
+\scratchcounter=\count149
+\scratchdimen=\dimen163
+\scratchbox=\box65
+\nofMPsegments=\count150
+\nofMParguments=\count151
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count123
-\MPscratchDim=\dimen127
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
+\MPscratchCnt=\count152
+\MPscratchDim=\dimen164
+\MPnumerator=\count153
+\makeMPintoPDFobject=\count154
 \everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
@@ -401,7 +642,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count126
+\c@lstlisting=\count155
 \openout3 = `mlcvNotes.bib'.
 
 
@@ -416,14 +657,14 @@ Package epstopdf Info: Source file: <images/boot_strap.eps>
 (epstopdf)                    size: 23806 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/boot_strap-eps-conv
 erted-to.pdf images/boot_strap.eps>
-(epstopdf)             \includegraphics on input line 36.
+(epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
 <images/boot_strap-eps-converted-to.pdf, id=1, 816.04875pt x 632.3625pt>
 File: images/boot_strap-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/boot_strap-eps-converted-to.pdf>
 Package pdftex.def Info: images/boot_strap-eps-converted-to.pdf used on input l
-ine 36.
+ine 38.
 (pdftex.def)             Requested size: 156.7823pt x 121.49133pt.
 Package epstopdf Info: Source file: <images/split_function_visualitions_1.eps>
 (epstopdf)                    date: 2017-03-13 16:53:29
@@ -434,7 +675,7 @@ onverted-to.pdf>
 (epstopdf)                    size: 50509 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
 alitions_1-eps-converted-to.pdf images/split_function_visualitions_1.eps>
-(epstopdf)             \includegraphics on input line 69.
+(epstopdf)             \includegraphics on input line 71.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/split_function_visualitions_1-eps-converted-to.pdf, id=2, 813.0375pt x 
@@ -443,8 +684,14 @@ File: images/split_function_visualitions_1-eps-converted-to.pdf Graphic file (t
 ype pdf)
  <use images/split_function_visualitions_1-eps-converted-to.pdf>
 Package pdftex.def Info: images/split_function_visualitions_1-eps-converted-to.
-pdf used on input line 69.
+pdf used on input line 71.
 (pdftex.def)             Requested size: 156.7823pt x 166.25768pt.
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
 Package epstopdf Info: Source file: <images/split_function_visualitions_3.eps>
 (epstopdf)                    date: 2017-03-13 16:53:03
 (epstopdf)                    size: 181931 bytes
@@ -454,7 +701,7 @@ onverted-to.pdf>
 (epstopdf)                    size: 34783 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
 alitions_3-eps-converted-to.pdf images/split_function_visualitions_3.eps>
-(epstopdf)             \includegraphics on input line 78.
+(epstopdf)             \includegraphics on input line 80.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/split_function_visualitions_3-eps-converted-to.pdf, id=3, 813.0375pt x 
@@ -463,33 +710,32 @@ File: images/split_function_visualitions_3-eps-converted-to.pdf Graphic file (t
 ype pdf)
  <use images/split_function_visualitions_3-eps-converted-to.pdf>
 Package pdftex.def Info: images/split_function_visualitions_3-eps-converted-to.
-pdf used on input line 78.
+pdf used on input line 80.
 (pdftex.def)             Requested size: 156.7823pt x 166.25768pt.
+
+[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ima
+ges/boot_strap-eps-converted-to.pdf> <./images/split_function_visualitions_1-ep
+s-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/split_function_visualitions_5.eps>
-(epstopdf)                    date: 2017-03-13 16:49:43
-(epstopdf)                    size: 826916 bytes
+(epstopdf)                    date: 2017-03-13 18:15:50
+(epstopdf)                    size: 860391 bytes
 (epstopdf)             Output file: <images/split_function_visualitions_5-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2017-03-13 16:53:36
-(epstopdf)                    size: 135622 bytes
+(epstopdf)                    date: 2017-03-13 18:15:54
+(epstopdf)                    size: 133039 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
 alitions_5-eps-converted-to.pdf images/split_function_visualitions_5.eps>
-(epstopdf)             \includegraphics on input line 87.
+(epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/split_function_visualitions_5-eps-converted-to.pdf, id=4, 803.0pt x 862
-.22125pt>
+<images/split_function_visualitions_5-eps-converted-to.pdf, id=34, 800.9925pt x
+ 609.27625pt>
 File: images/split_function_visualitions_5-eps-converted-to.pdf Graphic file (t
 ype pdf)
  <use images/split_function_visualitions_5-eps-converted-to.pdf>
 Package pdftex.def Info: images/split_function_visualitions_5-eps-converted-to.
-pdf used on input line 87.
-(pdftex.def)             Requested size: 156.7823pt x 168.33638pt.
-
-[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ima
-ges/boot_strap-eps-converted-to.pdf> <./images/split_function_visualitions_1-ep
-s-converted-to.pdf> <./images/split_function_visualitions_3-eps-converted-to.pd
-f>]
+pdf used on input line 89.
+(pdftex.def)             Requested size: 156.7823pt x 119.24998pt.
 Package epstopdf Info: Source file: <images/leaf_node_distributions_1.eps>
 (epstopdf)                    date: 2017-03-13 12:54:31
 (epstopdf)                    size: 97247 bytes
@@ -499,137 +745,207 @@ rted-to.pdf>
 (epstopdf)                    size: 13158 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/leaf_node_distribut
 ions_1-eps-converted-to.pdf images/leaf_node_distributions_1.eps>
-(epstopdf)             \includegraphics on input line 99.
+(epstopdf)             \includegraphics on input line 101.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/leaf_node_distributions_1-eps-converted-to.pdf, id=44, 796.9775pt x 600
+<images/leaf_node_distributions_1-eps-converted-to.pdf, id=35, 796.9775pt x 600
 .2425pt>
 File: images/leaf_node_distributions_1-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use images/leaf_node_distributions_1-eps-converted-to.pdf>
 Package pdftex.def Info: images/leaf_node_distributions_1-eps-converted-to.pdf 
-used on input line 99.
+used on input line 101.
 (pdftex.def)             Requested size: 156.7823pt x 118.0772pt.
+Package epstopdf Info: Source file: <images/test_points_eval.eps>
+(epstopdf)                    date: 2017-03-13 17:34:45
+(epstopdf)                    size: 63706 bytes
+(epstopdf)             Output file: <images/test_points_eval-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-03-13 17:37:22
+(epstopdf)                    size: 12428 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/test_points_eval-ep
+s-converted-to.pdf images/test_points_eval.eps>
+(epstopdf)             \includegraphics on input line 114.
+Package epstopdf Info: Output file is already uptodate.
 
-<images/ax_5_trees.png, id=45, 1003.5894pt x 729.927pt>
+<images/test_points_eval-eps-converted-to.pdf, id=36, 834.11626pt x 657.45625pt
+>
+File: images/test_points_eval-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/test_points_eval-eps-converted-to.pdf>
+Package pdftex.def Info: images/test_points_eval-eps-converted-to.pdf used on i
+nput line 114.
+(pdftex.def)             Requested size: 128.03902pt x 100.92152pt.
+Package epstopdf Info: Source file: <images/test_points_hist.eps>
+(epstopdf)                    date: 2017-03-13 17:27:20
+(epstopdf)                    size: 110145 bytes
+(epstopdf)             Output file: <images/test_points_hist-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-03-13 17:28:08
+(epstopdf)                    size: 14304 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/test_points_hist-ep
+s-converted-to.pdf images/test_points_hist.eps>
+(epstopdf)             \includegraphics on input line 115.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/test_points_hist-eps-converted-to.pdf, id=37, 796.9775pt x 617.30624pt>
+File: images/test_points_hist-eps-converted-to.pdf Graphic file (type pdf)
+<use images/test_points_hist-eps-converted-to.pdf>
+Package pdftex.def Info: images/test_points_hist-eps-converted-to.pdf used on i
+nput line 115.
+(pdftex.def)             Requested size: 128.03902pt x 99.16663pt.
+ [2 <./images/split_function_visualitions_3-eps-converted-to.pdf> <./images/spl
+it_function_visualitions_5-eps-converted-to.pdf> <./images/leaf_node_distributi
+ons_1-eps-converted-to.pdf> <./images/test_points_eval-eps-converted-to.pdf> <.
+/images/test_points_hist-eps-converted-to.pdf>] <images/ax_5_trees.png, id=81, 
+1003.5894pt x 729.927pt>
 File: images/ax_5_trees.png Graphic file (type png)
 
 <use images/ax_5_trees.png>
-Package pdftex.def Info: images/ax_5_trees.png used on input line 110.
+Package pdftex.def Info: images/ax_5_trees.png used on input line 126.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/ax_20_trees.png, id=46, 1003.5894pt x 729.927pt>
+<images/ax_20_trees.png, id=82, 1003.5894pt x 729.927pt>
 File: images/ax_20_trees.png Graphic file (type png)
 
 <use images/ax_20_trees.png>
-Package pdftex.def Info: images/ax_20_trees.png used on input line 111.
+Package pdftex.def Info: images/ax_20_trees.png used on input line 127.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/ax_100_trees.png, id=47, 1003.5894pt x 729.927pt>
+<images/ax_100_trees.png, id=83, 1003.5894pt x 729.927pt>
 File: images/ax_100_trees.png Graphic file (type png)
 
 <use images/ax_100_trees.png>
-Package pdftex.def Info: images/ax_100_trees.png used on input line 112.
+Package pdftex.def Info: images/ax_100_trees.png used on input line 128.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/ax_200_trees.png, id=48, 1003.5894pt x 707.7642pt>
+<images/ax_200_trees.png, id=84, 1003.5894pt x 707.7642pt>
 File: images/ax_200_trees.png Graphic file (type png)
 
 <use images/ax_200_trees.png>
-Package pdftex.def Info: images/ax_200_trees.png used on input line 113.
+Package pdftex.def Info: images/ax_200_trees.png used on input line 129.
 (pdftex.def)             Requested size: 104.51888pt x 73.70724pt.
 
-<images/splitNum_3.png, id=49, 1003.5894pt x 729.927pt>
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+[]\OT1/cmr/m/n/10 Next, we vary the num-ber of split func-tions,
+ []
+
+<images/splitNum_3.png, id=85, 1003.5894pt x 703.428pt>
 File: images/splitNum_3.png Graphic file (type png)
 
 <use images/splitNum_3.png>
-Package pdftex.def Info: images/splitNum_3.png used on input line 121.
-(pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
+Package pdftex.def Info: images/splitNum_3.png used on input line 141.
+(pdftex.def)             Requested size: 104.51888pt x 73.25568pt.
 
-<images/splitNum_5.png, id=50, 1003.5894pt x 729.927pt>
+<images/splitNum_5.png, id=86, 1003.5894pt x 729.927pt>
 File: images/splitNum_5.png Graphic file (type png)
 
 <use images/splitNum_5.png>
-Package pdftex.def Info: images/splitNum_5.png used on input line 122.
+Package pdftex.def Info: images/splitNum_5.png used on input line 142.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/splitNum_7.png, id=51, 1003.5894pt x 729.927pt>
+<images/splitNum_7.png, id=87, 1003.5894pt x 729.927pt>
 File: images/splitNum_7.png Graphic file (type png)
 
 <use images/splitNum_7.png>
-Package pdftex.def Info: images/splitNum_7.png used on input line 123.
+Package pdftex.def Info: images/splitNum_7.png used on input line 143.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/splitNum_9.png, id=52, 1003.5894pt x 729.927pt>
-File: images/splitNum_9.png Graphic file (type png)
+<images/splitNum_15.png, id=88, 1003.5894pt x 725.5908pt>
+File: images/splitNum_15.png Graphic file (type png)
 
-<use images/splitNum_9.png>
-Package pdftex.def Info: images/splitNum_9.png used on input line 124.
-(pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
+<use images/splitNum_15.png>
+Package pdftex.def Info: images/splitNum_15.png used on input line 144.
+(pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
 
-<images/tree_depth_3.png, id=53, 1003.5894pt x 729.927pt>
+<images/tree_depth_3.png, id=89, 1003.5894pt x 729.927pt>
 File: images/tree_depth_3.png Graphic file (type png)
 
 <use images/tree_depth_3.png>
-Package pdftex.def Info: images/tree_depth_3.png used on input line 132.
+Package pdftex.def Info: images/tree_depth_3.png used on input line 154.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/tree_depth_5.png, id=54, 1003.5894pt x 729.927pt>
+<images/tree_depth_5.png, id=90, 1003.5894pt x 729.927pt>
 File: images/tree_depth_5.png Graphic file (type png)
 
 <use images/tree_depth_5.png>
-Package pdftex.def Info: images/tree_depth_5.png used on input line 133.
+Package pdftex.def Info: images/tree_depth_5.png used on input line 155.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/tree_depth_7.png, id=55, 1003.5894pt x 729.927pt>
+<images/tree_depth_7.png, id=91, 1003.5894pt x 729.927pt>
 File: images/tree_depth_7.png Graphic file (type png)
 
 <use images/tree_depth_7.png>
-Package pdftex.def Info: images/tree_depth_7.png used on input line 134.
+Package pdftex.def Info: images/tree_depth_7.png used on input line 156.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/tree_depth_9.png, id=56, 1003.5894pt x 729.927pt>
+<images/tree_depth_9.png, id=92, 1003.5894pt x 729.927pt>
 File: images/tree_depth_9.png Graphic file (type png)
 
 <use images/tree_depth_9.png>
-Package pdftex.def Info: images/tree_depth_9.png used on input line 135.
+Package pdftex.def Info: images/tree_depth_9.png used on input line 157.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
- [2 <./images/split_function_visualitions_5-eps-converted-to.pdf> <./images/lea
-f_node_distributions_1-eps-converted-to.pdf> <./images/ax_5_trees.png (PNG copy
-)> <./images/ax_20_trees.png (PNG copy)> <./images/ax_100_trees.png (PNG copy)>
- <./images/ax_200_trees.png (PNG copy)> <./images/splitNum_3.png (PNG copy)> <.
-/images/splitNum_5.png (PNG copy)> <./images/splitNum_7.png (PNG copy)> <./imag
-es/splitNum_9.png (PNG copy)>]
+ [3 <./images/ax_5_trees.png (PNG copy)> <./images/ax_20_trees.png (PNG copy)> 
+<./images/ax_100_trees.png (PNG copy)> <./images/ax_200_trees.png (PNG copy)> <
+./images/splitNum_3.png (PNG copy)> <./images/splitNum_5.png (PNG copy)> <./ima
+ges/splitNum_7.png (PNG copy)> <./images/splitNum_15.png (PNG copy)> <./images/
+tree_depth_3.png (PNG copy)> <./images/tree_depth_5.png (PNG copy)> <./images/t
+ree_depth_7.png (PNG copy)> <./images/tree_depth_9.png (PNG copy)>] <images/axi
+s.png, id=99, 1003.5894pt x 725.5908pt>
+File: images/axis.png Graphic file (type png)
+
+<use images/axis.png>
+Package pdftex.def Info: images/axis.png used on input line 172.
+(pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
+ <images/linear.png, id=100, 1003.5894pt x 725.5908pt>
+File: images/linear.png Graphic file (type png)
+
+<use images/linear.png>
+Package pdftex.def Info: images/linear.png used on input line 173.
+(pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
+ <images/quad.png, id=101, 1003.5894pt x 725.5908pt>
+File: images/quad.png Graphic file (type png)
+
+<use images/quad.png>
+Package pdftex.def Info: images/quad.png used on input line 174.
+(pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
+ <images/cubic.png, id=102, 1003.5894pt x 725.5908pt>
+File: images/cubic.png Graphic file (type png)
+
+<use images/cubic.png>
+Package pdftex.def Info: images/cubic.png used on input line 175.
+(pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
+
 No file mlcv.bbl.
-[3 <./images/tree_depth_3.png (PNG copy)> <./images/tree_depth_5.png (PNG copy)
-> <./images/tree_depth_7.png (PNG copy)> <./images/tree_depth_9.png (PNG copy)>
-] (./mlcv.aux)
+[4 <./images/axis.png (PNG copy)> <./images/linear.png (PNG copy)> <./images/qu
+ad.png (PNG copy)> <./images/cubic.png (PNG copy)>] (./mlcv.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6005 strings out of 493014
- 84201 string characters out of 6133351
- 172526 words of memory out of 5000000
- 9437 multiletter control sequences out of 15000+600000
+ 13794 strings out of 493014
+ 245366 string characters out of 6133351
+ 299736 words of memory out of 5000000
+ 17182 multiletter control sequences out of 15000+600000
  8722 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,32p,806b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,42p,10379b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
 usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on mlcv.pdf (3 pages, 3306850 bytes).
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on mlcv.pdf (4 pages, 4898266 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
