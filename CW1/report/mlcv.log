@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.21)  14 MAR 2017 07:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.21)  14 MAR 2017 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -650,10 +650,10 @@ e
 Class revtex4-1 Warning: Assuming \noaffiliation for authors.
 
 Package epstopdf Info: Source file: <images/boot_strap.eps>
-(epstopdf)                    date: 2017-03-13 16:56:28
+(epstopdf)                    date: 2017-03-14 11:09:53
 (epstopdf)                    size: 219147 bytes
 (epstopdf)             Output file: <images/boot_strap-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-13 16:56:32
+(epstopdf)                    date: 2017-03-14 11:25:19
 (epstopdf)                    size: 23806 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/boot_strap-eps-conv
 erted-to.pdf images/boot_strap.eps>
@@ -667,11 +667,11 @@ Package pdftex.def Info: images/boot_strap-eps-converted-to.pdf used on input l
 ine 38.
 (pdftex.def)             Requested size: 156.7823pt x 121.49133pt.
 Package epstopdf Info: Source file: <images/split_function_visualitions_1.eps>
-(epstopdf)                    date: 2017-03-13 16:53:29
+(epstopdf)                    date: 2017-03-14 11:09:53
 (epstopdf)                    size: 280385 bytes
 (epstopdf)             Output file: <images/split_function_visualitions_1-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2017-03-13 16:53:35
+(epstopdf)                    date: 2017-03-14 11:25:20
 (epstopdf)                    size: 50509 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
 alitions_1-eps-converted-to.pdf images/split_function_visualitions_1.eps>
@@ -693,11 +693,11 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 Package epstopdf Info: Source file: <images/split_function_visualitions_3.eps>
-(epstopdf)                    date: 2017-03-13 16:53:03
+(epstopdf)                    date: 2017-03-14 11:09:53
 (epstopdf)                    size: 181931 bytes
 (epstopdf)             Output file: <images/split_function_visualitions_3-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2017-03-13 16:54:02
+(epstopdf)                    date: 2017-03-14 11:25:21
 (epstopdf)                    size: 34783 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
 alitions_3-eps-converted-to.pdf images/split_function_visualitions_3.eps>
@@ -717,11 +717,11 @@ pdf used on input line 80.
 ges/boot_strap-eps-converted-to.pdf> <./images/split_function_visualitions_1-ep
 s-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/split_function_visualitions_5.eps>
-(epstopdf)                    date: 2017-03-13 18:15:50
+(epstopdf)                    date: 2017-03-14 11:09:53
 (epstopdf)                    size: 860391 bytes
 (epstopdf)             Output file: <images/split_function_visualitions_5-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2017-03-13 18:15:54
+(epstopdf)                    date: 2017-03-14 11:25:22
 (epstopdf)                    size: 133039 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
 alitions_5-eps-converted-to.pdf images/split_function_visualitions_5.eps>
@@ -737,11 +737,11 @@ Package pdftex.def Info: images/split_function_visualitions_5-eps-converted-to.
 pdf used on input line 89.
 (pdftex.def)             Requested size: 156.7823pt x 119.24998pt.
 Package epstopdf Info: Source file: <images/leaf_node_distributions_1.eps>
-(epstopdf)                    date: 2017-03-13 12:54:31
+(epstopdf)                    date: 2017-03-14 11:09:53
 (epstopdf)                    size: 97247 bytes
 (epstopdf)             Output file: <images/leaf_node_distributions_1-eps-conve
 rted-to.pdf>
-(epstopdf)                    date: 2017-03-13 12:56:23
+(epstopdf)                    date: 2017-03-14 11:25:23
 (epstopdf)                    size: 13158 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/leaf_node_distribut
 ions_1-eps-converted-to.pdf images/leaf_node_distributions_1.eps>
@@ -757,11 +757,11 @@ Package pdftex.def Info: images/leaf_node_distributions_1-eps-converted-to.pdf
 used on input line 101.
 (pdftex.def)             Requested size: 156.7823pt x 118.0772pt.
 Package epstopdf Info: Source file: <images/test_points_eval.eps>
-(epstopdf)                    date: 2017-03-13 17:34:45
+(epstopdf)                    date: 2017-03-14 11:09:53
 (epstopdf)                    size: 63706 bytes
 (epstopdf)             Output file: <images/test_points_eval-eps-converted-to.p
 df>
-(epstopdf)                    date: 2017-03-13 17:37:22
+(epstopdf)                    date: 2017-03-14 11:25:24
 (epstopdf)                    size: 12428 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/test_points_eval-ep
 s-converted-to.pdf images/test_points_eval.eps>
@@ -776,11 +776,11 @@ Package pdftex.def Info: images/test_points_eval-eps-converted-to.pdf used on i
 nput line 114.
 (pdftex.def)             Requested size: 128.03902pt x 100.92152pt.
 Package epstopdf Info: Source file: <images/test_points_hist.eps>
-(epstopdf)                    date: 2017-03-13 17:27:20
+(epstopdf)                    date: 2017-03-14 11:09:53
 (epstopdf)                    size: 110145 bytes
 (epstopdf)             Output file: <images/test_points_hist-eps-converted-to.p
 df>
-(epstopdf)                    date: 2017-03-13 17:28:08
+(epstopdf)                    date: 2017-03-14 11:25:25
 (epstopdf)                    size: 14304 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/test_points_hist-ep
 s-converted-to.pdf images/test_points_hist.eps>
@@ -914,19 +914,75 @@ File: images/cubic.png Graphic file (type png)
 <use images/cubic.png>
 Package pdftex.def Info: images/cubic.png used on input line 175.
 (pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
+Package epstopdf Info: Source file: <images/numBins_acc.eps>
+(epstopdf)                    date: 2017-03-14 11:30:09
+(epstopdf)                    size: 32257 bytes
+(epstopdf)             Output file: <images/numBins_acc-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-14 11:29:47
+(epstopdf)                    size: 10961 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/numBins_acc-eps-con
+verted-to.pdf images/numBins_acc.eps>
+(epstopdf)             \includegraphics on input line 185.
+runsystem(repstopdf --outfile=images/numBins_acc-eps-converted-to.pdf images/nu
+mBins_acc.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <images/numBins_acc-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-14 11:30:45
+(epstopdf)                    size: 11024 bytes.
+
+<images/numBins_acc-eps-converted-to.pdf, id=103, 843.15pt x 691.58376pt>
+File: images/numBins_acc-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/numBins_acc-eps-converted-to.pdf>
+Package pdftex.def Info: images/numBins_acc-eps-converted-to.pdf used on input 
+line 185.
+(pdftex.def)             Requested size: 128.03902pt x 105.02051pt.
+Package epstopdf Info: Source file: <images/numBins_complexity.eps>
+(epstopdf)                    date: 2017-03-14 11:30:39
+(epstopdf)                    size: 30707 bytes
+(epstopdf)             Output file: <images/numBins_complexity-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-03-14 11:29:48
+(epstopdf)                    size: 11014 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/numBins_complexity-
+eps-converted-to.pdf images/numBins_complexity.eps>
+(epstopdf)             \includegraphics on input line 186.
+runsystem(repstopdf --outfile=images/numBins_complexity-eps-converted-to.pdf im
+ages/numBins_complexity.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <images/numBins_complexity-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-03-14 11:30:46
+(epstopdf)                    size: 10786 bytes.
+
+<images/numBins_complexity-eps-converted-to.pdf, id=104, 848.16875pt x 691.5837
+6pt>
+File: images/numBins_complexity-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/numBins_complexity-eps-converted-to.pdf>
+Package pdftex.def Info: images/numBins_complexity-eps-converted-to.pdf used on
+ input line 186.
+(pdftex.def)             Requested size: 128.03902pt x 104.3979pt.
+
+<images/images.png, id=105, 1003.5894pt x 729.927pt>
+File: images/images.png Graphic file (type png)
+ <use images/images.png>
+Package pdftex.def Info: images/images.png used on input line 192.
+(pdftex.def)             Requested size: 156.7823pt x 114.02853pt.
 
 No file mlcv.bbl.
 [4 <./images/axis.png (PNG copy)> <./images/linear.png (PNG copy)> <./images/qu
-ad.png (PNG copy)> <./images/cubic.png (PNG copy)>] (./mlcv.aux)
+ad.png (PNG copy)> <./images/cubic.png (PNG copy)> <./images/numBins_acc-eps-co
+nverted-to.pdf> <./images/numBins_complexity-eps-converted-to.pdf> <./images/im
+ages.png (PNG copy)>] (./mlcv.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13794 strings out of 493014
- 245366 string characters out of 6133351
+ 13809 strings out of 493014
+ 245878 string characters out of 6133351
  299736 words of memory out of 5000000
- 17182 multiletter control sequences out of 15000+600000
+ 17194 multiletter control sequences out of 15000+600000
  8722 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,42p,10379b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -942,10 +998,10 @@ al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
 ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on mlcv.pdf (4 pages, 4898266 bytes).
+Output written on mlcv.pdf (4 pages, 5696330 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 163 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
