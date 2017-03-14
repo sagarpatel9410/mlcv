@@ -1,6 +1,6 @@
 numBins = 256;
 treeNum = [5,10,20,35,50,75,100,150,175,200,250,300];
-treeNum_CodeBook = [5,10,20,50];
+treeNum_CodeBook = [20];
 depth = [3,5,7,9,11];
 depthCodeBook = [3,5,7,9,11];
 split = 5;

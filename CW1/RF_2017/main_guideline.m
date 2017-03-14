@@ -17,7 +17,7 @@ rng(1);
 % % experiment with Toy_Spiral dataset for classification
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % % Initialisation
-% init;
+%init;
 % 
 % % Select dataset
 % [data_train, data_test] = getData('Toy_Spiral'); % {'Toy_Gaussian', 'Toy_Spiral', 'Toy_Circle', 'Caltech'}
