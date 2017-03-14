@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.21)  14 MAR 2017 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.21)  14 MAR 2017 14:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -650,10 +650,10 @@ e
 Class revtex4-1 Warning: Assuming \noaffiliation for authors.
 
 Package epstopdf Info: Source file: <images/boot_strap.eps>
-(epstopdf)                    date: 2017-03-14 11:09:53
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 219147 bytes
 (epstopdf)             Output file: <images/boot_strap-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-14 11:25:19
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 23806 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/boot_strap-eps-conv
 erted-to.pdf images/boot_strap.eps>
@@ -667,11 +667,11 @@ Package pdftex.def Info: images/boot_strap-eps-converted-to.pdf used on input l
 ine 38.
 (pdftex.def)             Requested size: 156.7823pt x 121.49133pt.
 Package epstopdf Info: Source file: <images/split_function_visualitions_1.eps>
-(epstopdf)                    date: 2017-03-14 11:09:53
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 280385 bytes
 (epstopdf)             Output file: <images/split_function_visualitions_1-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2017-03-14 11:25:20
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 50509 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
 alitions_1-eps-converted-to.pdf images/split_function_visualitions_1.eps>
@@ -693,11 +693,11 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 Package epstopdf Info: Source file: <images/split_function_visualitions_3.eps>
-(epstopdf)                    date: 2017-03-14 11:09:53
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 181931 bytes
 (epstopdf)             Output file: <images/split_function_visualitions_3-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2017-03-14 11:25:21
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 34783 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
 alitions_3-eps-converted-to.pdf images/split_function_visualitions_3.eps>
@@ -717,11 +717,11 @@ pdf used on input line 80.
 ges/boot_strap-eps-converted-to.pdf> <./images/split_function_visualitions_1-ep
 s-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/split_function_visualitions_5.eps>
-(epstopdf)                    date: 2017-03-14 11:09:53
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 860391 bytes
 (epstopdf)             Output file: <images/split_function_visualitions_5-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2017-03-14 11:25:22
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 133039 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
 alitions_5-eps-converted-to.pdf images/split_function_visualitions_5.eps>
@@ -737,11 +737,11 @@ Package pdftex.def Info: images/split_function_visualitions_5-eps-converted-to.
 pdf used on input line 89.
 (pdftex.def)             Requested size: 156.7823pt x 119.24998pt.
 Package epstopdf Info: Source file: <images/leaf_node_distributions_1.eps>
-(epstopdf)                    date: 2017-03-14 11:09:53
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 97247 bytes
 (epstopdf)             Output file: <images/leaf_node_distributions_1-eps-conve
 rted-to.pdf>
-(epstopdf)                    date: 2017-03-14 11:25:23
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 13158 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/leaf_node_distribut
 ions_1-eps-converted-to.pdf images/leaf_node_distributions_1.eps>
@@ -757,11 +757,11 @@ Package pdftex.def Info: images/leaf_node_distributions_1-eps-converted-to.pdf
 used on input line 101.
 (pdftex.def)             Requested size: 156.7823pt x 118.0772pt.
 Package epstopdf Info: Source file: <images/test_points_eval.eps>
-(epstopdf)                    date: 2017-03-14 11:09:53
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 63706 bytes
 (epstopdf)             Output file: <images/test_points_eval-eps-converted-to.p
 df>
-(epstopdf)                    date: 2017-03-14 11:25:24
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 12428 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/test_points_eval-ep
 s-converted-to.pdf images/test_points_eval.eps>
@@ -776,11 +776,11 @@ Package pdftex.def Info: images/test_points_eval-eps-converted-to.pdf used on i
 nput line 114.
 (pdftex.def)             Requested size: 128.03902pt x 100.92152pt.
 Package epstopdf Info: Source file: <images/test_points_hist.eps>
-(epstopdf)                    date: 2017-03-14 11:09:53
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 110145 bytes
 (epstopdf)             Output file: <images/test_points_hist-eps-converted-to.p
 df>
-(epstopdf)                    date: 2017-03-14 11:25:25
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 14304 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/test_points_hist-ep
 s-converted-to.pdf images/test_points_hist.eps>
@@ -914,75 +914,186 @@ File: images/cubic.png Graphic file (type png)
 <use images/cubic.png>
 Package pdftex.def Info: images/cubic.png used on input line 175.
 (pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
+ <images/confus.png, id=103, 1003.5894pt x 707.7642pt>
+File: images/confus.png Graphic file (type png)
+
+<use images/confus.png>
+Package pdftex.def Info: images/confus.png used on input line 185.
+(pdftex.def)             Requested size: 128.03902pt x 90.29543pt.
+ <images/images.png, id=104, 1003.5894pt x 729.927pt>
+File: images/images.png Graphic file (type png)
+
+<use images/images.png>
+Package pdftex.def Info: images/images.png used on input line 186.
+(pdftex.def)             Requested size: 128.03902pt x 93.12292pt.
 Package epstopdf Info: Source file: <images/numBins_acc.eps>
-(epstopdf)                    date: 2017-03-14 11:30:09
-(epstopdf)                    size: 32257 bytes
+(epstopdf)                    date: 2017-03-14 14:25:13
+(epstopdf)                    size: 27894 bytes
 (epstopdf)             Output file: <images/numBins_acc-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-14 11:29:47
-(epstopdf)                    size: 10961 bytes
+(epstopdf)                    date: 2017-03-14 14:25:13
+(epstopdf)                    size: 10692 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/numBins_acc-eps-con
 verted-to.pdf images/numBins_acc.eps>
-(epstopdf)             \includegraphics on input line 185.
-runsystem(repstopdf --outfile=images/numBins_acc-eps-converted-to.pdf images/nu
-mBins_acc.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 201.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <images/numBins_acc-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-14 11:30:45
-(epstopdf)                    size: 11024 bytes.
-
-<images/numBins_acc-eps-converted-to.pdf, id=103, 843.15pt x 691.58376pt>
+<images/numBins_acc-eps-converted-to.pdf, id=105, 843.15pt x 691.58376pt>
 File: images/numBins_acc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/numBins_acc-eps-converted-to.pdf>
 Package pdftex.def Info: images/numBins_acc-eps-converted-to.pdf used on input 
-line 185.
+line 201.
 (pdftex.def)             Requested size: 128.03902pt x 105.02051pt.
 Package epstopdf Info: Source file: <images/numBins_complexity.eps>
-(epstopdf)                    date: 2017-03-14 11:30:39
+(epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 30707 bytes
 (epstopdf)             Output file: <images/numBins_complexity-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2017-03-14 11:29:48
-(epstopdf)                    size: 11014 bytes
+(epstopdf)                    date: 2017-03-14 14:25:06
+(epstopdf)                    size: 10786 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/numBins_complexity-
 eps-converted-to.pdf images/numBins_complexity.eps>
-(epstopdf)             \includegraphics on input line 186.
-runsystem(repstopdf --outfile=images/numBins_complexity-eps-converted-to.pdf im
-ages/numBins_complexity.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 202.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <images/numBins_complexity-eps-converted-to
-.pdf>
-(epstopdf)                    date: 2017-03-14 11:30:46
-(epstopdf)                    size: 10786 bytes.
-
-<images/numBins_complexity-eps-converted-to.pdf, id=104, 848.16875pt x 691.5837
+<images/numBins_complexity-eps-converted-to.pdf, id=106, 848.16875pt x 691.5837
 6pt>
 File: images/numBins_complexity-eps-converted-to.pdf Graphic file (type pdf)
  <use images/numBins_complexity-eps-converted-to.pdf>
 Package pdftex.def Info: images/numBins_complexity-eps-converted-to.pdf used on
- input line 186.
+ input line 202.
 (pdftex.def)             Requested size: 128.03902pt x 104.3979pt.
+Package epstopdf Info: Source file: <images/numTrees_acc.eps>
+(epstopdf)                    date: 2017-03-14 11:51:00
+(epstopdf)                    size: 30792 bytes
+(epstopdf)             Output file: <images/numTrees_acc-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-14 11:52:19
+(epstopdf)                    size: 10435 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/numTrees_acc-eps-co
+nverted-to.pdf images/numTrees_acc.eps>
+(epstopdf)             \includegraphics on input line 212.
+Package epstopdf Info: Output file is already uptodate.
 
-<images/images.png, id=105, 1003.5894pt x 729.927pt>
-File: images/images.png Graphic file (type png)
- <use images/images.png>
-Package pdftex.def Info: images/images.png used on input line 192.
-(pdftex.def)             Requested size: 156.7823pt x 114.02853pt.
+<images/numTrees_acc-eps-converted-to.pdf, id=107, 867.24pt x 691.58376pt>
+File: images/numTrees_acc-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/numTrees_acc-eps-converted-to.pdf>
+Package pdftex.def Info: images/numTrees_acc-eps-converted-to.pdf used on input
+ line 212.
+(pdftex.def)             Requested size: 128.03902pt x 102.09741pt.
+Package epstopdf Info: Source file: <images/numTrees_complexity.eps>
+(epstopdf)                    date: 2017-03-14 11:51:14
+(epstopdf)                    size: 23515 bytes
+(epstopdf)             Output file: <images/numTrees_complexity-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-03-14 11:52:19
+(epstopdf)                    size: 9701 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/numTrees_complexity
+-eps-converted-to.pdf images/numTrees_complexity.eps>
+(epstopdf)             \includegraphics on input line 213.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/numTrees_complexity-eps-converted-to.pdf, id=108, 856.19875pt x 691.583
+76pt>
+File: images/numTrees_complexity-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/numTrees_complexity-eps-converted-to.pdf>
+Package pdftex.def Info: images/numTrees_complexity-eps-converted-to.pdf used o
+n input line 213.
+(pdftex.def)             Requested size: 128.03902pt x 103.4165pt.
+ [4 <./images/axis.png (PNG copy)> <./images/linear.png (PNG copy)> <./images/q
+uad.png (PNG copy)> <./images/cubic.png (PNG copy)> <./images/confus.png (PNG c
+opy)> <./images/images.png (PNG copy)> <./images/numBins_acc-eps-converted-to.p
+df> <./images/numBins_complexity-eps-converted-to.pdf> <./images/numTrees_acc-e
+ps-converted-to.pdf> <./images/numTrees_complexity-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/numSplits_acc.eps>
+(epstopdf)                    date: 2017-03-14 11:54:19
+(epstopdf)                    size: 24725 bytes
+(epstopdf)             Output file: <images/numSplits_acc-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2017-03-14 11:54:26
+(epstopdf)                    size: 10381 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/numSplits_acc-eps-c
+onverted-to.pdf images/numSplits_acc.eps>
+(epstopdf)             \includegraphics on input line 224.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/numSplits_acc-eps-converted-to.pdf, id=144, 853.1875pt x 696.6025pt>
+File: images/numSplits_acc-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/numSplits_acc-eps-converted-to.pdf>
+Package pdftex.def Info: images/numSplits_acc-eps-converted-to.pdf used on inpu
+t line 224.
+(pdftex.def)             Requested size: 128.03902pt x 104.539pt.
+Package epstopdf Info: Source file: <images/numSplits_complexity.eps>
+(epstopdf)                    date: 2017-03-14 11:45:32
+(epstopdf)                    size: 28499 bytes
+(epstopdf)             Output file: <images/numSplits_complexity-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-03-14 11:45:58
+(epstopdf)                    size: 11174 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/numSplits_complexit
+y-eps-converted-to.pdf images/numSplits_complexity.eps>
+(epstopdf)             \includegraphics on input line 225.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/numSplits_complexity-eps-converted-to.pdf, id=145, 842.14626pt x 696.60
+25pt>
+File: images/numSplits_complexity-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/numSplits_complexity-eps-converted-to.pdf>
+Package pdftex.def Info: images/numSplits_complexity-eps-converted-to.pdf used 
+on input line 225.
+(pdftex.def)             Requested size: 128.03902pt x 105.91019pt.
+Package epstopdf Info: Source file: <images/depth_acc.eps>
+(epstopdf)                    date: 2017-03-14 13:23:54
+(epstopdf)                    size: 23502 bytes
+(epstopdf)             Output file: <images/depth_acc-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-14 13:25:08
+(epstopdf)                    size: 9885 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/depth_acc-eps-conve
+rted-to.pdf images/depth_acc.eps>
+(epstopdf)             \includegraphics on input line 235.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/depth_acc-eps-converted-to.pdf, id=146, 853.1875pt x 676.5275pt>
+File: images/depth_acc-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/depth_acc-eps-converted-to.pdf>
+Package pdftex.def Info: images/depth_acc-eps-converted-to.pdf used on input li
+ne 235.
+(pdftex.def)             Requested size: 128.03902pt x 101.52635pt.
+Package epstopdf Info: Source file: <images/depth_complexity.eps>
+(epstopdf)                    date: 2017-03-14 14:05:56
+(epstopdf)                    size: 27582 bytes
+(epstopdf)             Output file: <images/depth_complexity-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-03-14 14:28:20
+(epstopdf)                    size: 10016 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/depth_complexity-ep
+s-converted-to.pdf images/depth_complexity.eps>
+(epstopdf)             \includegraphics on input line 236.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/depth_complexity-eps-converted-to.pdf, id=147, 836.12375pt x 696.6025pt
+>
+File: images/depth_complexity-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/depth_complexity-eps-converted-to.pdf>
+Package pdftex.def Info: images/depth_complexity-eps-converted-to.pdf used on i
+nput line 236.
+(pdftex.def)             Requested size: 128.03902pt x 106.66487pt.
 
 No file mlcv.bbl.
-[4 <./images/axis.png (PNG copy)> <./images/linear.png (PNG copy)> <./images/qu
-ad.png (PNG copy)> <./images/cubic.png (PNG copy)> <./images/numBins_acc-eps-co
-nverted-to.pdf> <./images/numBins_complexity-eps-converted-to.pdf> <./images/im
-ages.png (PNG copy)>] (./mlcv.aux)
+[5 <./images/numSplits_acc-eps-converted-to.pdf> <./images/numSplits_complexity
+-eps-converted-to.pdf> <./images/depth_acc-eps-converted-to.pdf> <./images/dept
+h_complexity-eps-converted-to.pdf>] (./mlcv.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13809 strings out of 493014
- 245878 string characters out of 6133351
- 299736 words of memory out of 5000000
- 17194 multiletter control sequences out of 15000+600000
+ 13847 strings out of 493014
+ 247288 string characters out of 6133351
+ 299751 words of memory out of 5000000
+ 17225 multiletter control sequences out of 15000+600000
  8722 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,42p,10379b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -998,10 +1109,10 @@ al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
 ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on mlcv.pdf (4 pages, 5696330 bytes).
+Output written on mlcv.pdf (5 pages, 5791388 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 222 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -176,10 +176,23 @@ Note that all the discussion above has all been made with respect to the axis-al
     \caption{Overview of spectral subtraction process}
 \end{figure}
 
-
-
 \section{RF Classifier}
 
+The RF is trained using the a vocabulary generated using the K-means algorithm and subsequently performance is tested. The confusion matrix below shows that perfect object classification is obtained for the Trilobite and the Windsor Chair, whereas algorithm is the worst at identifying watches.
+
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.49\columnwidth]{confus}    
+    \includegraphics[width=0.49\columnwidth]{images}
+    \caption{Overview of spectral subtraction process}
+\end{figure}
+
+
+\subsection*{Vocabulary Size}
+
+Using the K-means algorithm to form a Bag-of-Words (BoW) representation, we have direct control over vocabulary size. The BoW can be interpreted as a dimensionality reduction technique that shrinks an image into a histogram indicating the frequency of occurrence of codewords, which in this case are the cluster centers. Using a small vocabulary, the dimension of the space in which the Random Forest Classifier acts is small. The classes will be harder to separate in a low dimensional space. As such, we observe that increasing the number of bins, thereby increasing the vocabulary size, we obtain a greater classification accuracy. 
+
+Notice however the performance increase by increasing the vocabulary size from 512 to 1024 is marginal, when there are 50 or 150 trees in our forest. Performance drops when an extremely large number of bins are used but the number of trees is kept low. With 1024 codewords in our dictionary, the $E_{av}$ is high. The high error that each tree incurs can either by averaged away using the committee machine, or by increasing depth and the number of split functions tried, we can lower $E_{av}$. 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.49\columnwidth]{numBins_acc}
@@ -187,13 +200,38 @@ Note that all the discussion above has all been made with respect to the axis-al
     \caption{Overview of spectral subtraction process}
 \end{figure}
 
+\subsection*{Number of Trees}
+
+The graphs below corroborate the discussion above about the effects that the number of trees has on performance of the Random Forest algorithm. Regardless of the vocabulary size, increasing the number of trees yields an increase in performance. However, setting  \texttt{numTrees} to be greater that $180$ does not lead to any significant improvements in the recognition accuracy. Also, we observe that increasing the number of trees causes computational complexity to grow linear. Note that, no parallel processing has been done as of yet; the algorithm is susceptible to parallelism. 
+
 \begin{figure}[H]
 	\centering
-    \includegraphics[width=0.60\columnwidth]{images}
+    \includegraphics[width=0.49\columnwidth]{numTrees_acc}
+	\includegraphics[width=0.49\columnwidth]{numTrees_complexity}
+    \caption{Overview of spectral subtraction process}
+    \label{fig:numtrees_caltech}
+\end{figure}
+
+\subsection*{Number of Split Functions}
+
+Again, the graphs below corroborate the discussion above about the effects of increasing the number of split functions. We observed visually that setting \texttt{numSplits} to be small lead to artifacts appearing the Toy Spiral data. These artifacts are analogous to the poor recognition accuracy obtained in the figure below. We also observed that setting \texttt{numSplits} to be large, overfitting started to occur. Again, we observe this numerically as the performance starts to decrease after a certain point. Although the general patterns are similar, notice how different the scales are. For performance to drop, we need to set the number of split functions tested at each node to be 150. The reason for this is that instead of seperating points in a 2-dimensional space as in the case of the Toy Spiral data, we are now separating points in much higher dimensions. In fact, the graphs below are obtained using a vocabulary consisting of 256 codewords. As such, to correlate the trees in such a large dimension, we need to try a lot of split functions. 
+
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.49\columnwidth]{numSplits_acc}
+	\includegraphics[width=0.49\columnwidth]{numSplits_complexity}
     \caption{Overview of spectral subtraction process}
 \end{figure}
 
+\subsection*{Depth of Tree}
 
+Lastly, the impact of tree depth is studied. The most important thing to notice from the graphs is how poorly the algorithm scales in terms of complexity. Note that the graph shows the average time taken to grow each tree in the forest. This is expected since the number of nodes in our tree grows exponentially with tree depth. For relative good performance, we would need at least 150 trees in our forest. If each tree took $10$ seconds to grow, simply training the forest would take approximately 25 minutes. As mentioned above, increasing tree depth is not that wise and other parameters should be tuned to increase performance. Anyway, performance does not always increase with an increase in tree depth. Notice that for the axis-aligned split function, the peak performance occurs at a depth of 8. 
 
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.49\columnwidth]{depth_acc}
+	\includegraphics[width=0.49\columnwidth]{depth_complexity}
+    \caption{Overview of spectral subtraction process}
+\end{figure}
 
 \end{document}
