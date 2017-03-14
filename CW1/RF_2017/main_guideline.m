@@ -81,29 +81,16 @@ rng(1);
 % Using rf-codebook or k - means
 % rf_codebook=0 : k-means
 % rf_codebook=1 : rf
-rf_codebook=0;
 
 % number of descriptors to use
-numDescriptors=10e4;
 
-% If using rf codebook, describe parameters
-param.num = 5;         % Number of trees
-param.depth = 5;        % trees depth
-param.splitNum = 5;     % Number of split functions to try
-param.split = 'IG';     % Currently support 'information gain' only
-param.weakLearner = 'two-pixel';
+
 
 % If using K-means, define number of bins
 %numBins=256;
 
 % define number of training and testing images
 % first index represents training, second index represents testing
-imgSel=[15 15];
-tic; % Start Timer
-
-[data_train, data_test, classList, imgIdx_tr, imgIdx_te] = getData('Caltech',imgSel, numDescriptors, rf_codebook,numBins,param);
-
-buildCodebookTime = toc; %Stop Timer
 close all;
 
 % Set the random forest parameters ...
@@ -133,7 +120,7 @@ for i=1:10
 end
 
 confus_script;
-
+clear filename filename_fig
 % plotting of correctly and wrongly classified data 
 % num_plot=5;
 % misclassified_plotting;
