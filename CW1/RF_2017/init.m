@@ -8,6 +8,8 @@ addpath('./internal');
 addpath('./external');
 addpath('./split_functions');
 addpath('./visualisation_functions');
+addpath(genpath('./data_collection'));
+
 addpath('./external/libsvm-3.18/matlab');
 
 % initialise external libraries
