@@ -13,3 +13,17 @@ ylabel('Classification Accuracy', 'FontSize', 25);
 legend({'Axis-Aligned', 'Two-Pixel'}, 'FontSize', 25);
 scale_graph;
 
+figure(2);
+plot(splitNum, buildRfClassifierTime_all(3,:,1), 'LineWidth', 2);
+hold on;
+plot(splitNum, buildRfClassifierTime_all(3,:,2), 'LineWidth', 2);
+axis([3 11 0 5]);
+set(gca,'fontsize',20);
+grid on; grid minor;
+title('Computational Complexity of numSplits','FontSize',40);
+xlabel('Number of Split Functions', 'FontSize', 25);
+ylabel('Time Taken to Build RF Classifier (s)', 'FontSize', 25);
+legend({'Axis-Aligned', 'Two-Pixel'}, 'FontSize', 25);
+scale_graph;
+
+
