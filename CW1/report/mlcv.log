@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.21)  14 MAR 2017 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.21)  14 MAR 2017 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,15 +516,15 @@ Package geometry Warning: Over-specification in `h'-direction.
 Package geometry Warning: Over-specification in `v'-direction.
     `height' (731.23582pt) is ignored.
 
-Class revtex4-1 Info: Patching LaTeX tabular. on input line 25.
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 24.
 
 Class revtex4-1 Warning: Repair the float package.
 
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 25.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 24.
 
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 25.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 25.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 25.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 24.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 24.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 24.
 (./mlcv.aux
 
 LaTeX Warning: Label `fig:leaf_nodes' multiply defined.
@@ -532,24 +532,24 @@ LaTeX Warning: Label `fig:leaf_nodes' multiply defined.
 )
 \openout1 = `mlcv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 24.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -686,12 +686,6 @@ ype pdf)
 Package pdftex.def Info: images/split_function_visualitions_1-eps-converted-to.
 pdf used on input line 71.
 (pdftex.def)             Requested size: 156.7823pt x 166.25768pt.
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
 Package epstopdf Info: Source file: <images/split_function_visualitions_3.eps>
 (epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 181931 bytes
@@ -715,7 +709,8 @@ pdf used on input line 80.
 
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ima
 ges/boot_strap-eps-converted-to.pdf> <./images/split_function_visualitions_1-ep
-s-converted-to.pdf>]
+s-converted-to.pdf> <./images/split_function_visualitions_3-eps-converted-to.pd
+f>]
 Package epstopdf Info: Source file: <images/split_function_visualitions_5.eps>
 (epstopdf)                    date: 2017-03-14 14:25:06
 (epstopdf)                    size: 860391 bytes
@@ -725,16 +720,16 @@ onverted-to.pdf>
 (epstopdf)                    size: 133039 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/split_function_visu
 alitions_5-eps-converted-to.pdf images/split_function_visualitions_5.eps>
-(epstopdf)             \includegraphics on input line 89.
+(epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/split_function_visualitions_5-eps-converted-to.pdf, id=34, 800.9925pt x
+<images/split_function_visualitions_5-eps-converted-to.pdf, id=42, 800.9925pt x
  609.27625pt>
 File: images/split_function_visualitions_5-eps-converted-to.pdf Graphic file (t
 ype pdf)
  <use images/split_function_visualitions_5-eps-converted-to.pdf>
 Package pdftex.def Info: images/split_function_visualitions_5-eps-converted-to.
-pdf used on input line 89.
+pdf used on input line 91.
 (pdftex.def)             Requested size: 156.7823pt x 119.24998pt.
 Package epstopdf Info: Source file: <images/leaf_node_distributions_1.eps>
 (epstopdf)                    date: 2017-03-14 14:25:06
@@ -745,16 +740,16 @@ rted-to.pdf>
 (epstopdf)                    size: 13158 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/leaf_node_distribut
 ions_1-eps-converted-to.pdf images/leaf_node_distributions_1.eps>
-(epstopdf)             \includegraphics on input line 101.
+(epstopdf)             \includegraphics on input line 103.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/leaf_node_distributions_1-eps-converted-to.pdf, id=35, 796.9775pt x 600
+<images/leaf_node_distributions_1-eps-converted-to.pdf, id=43, 796.9775pt x 600
 .2425pt>
 File: images/leaf_node_distributions_1-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use images/leaf_node_distributions_1-eps-converted-to.pdf>
 Package pdftex.def Info: images/leaf_node_distributions_1-eps-converted-to.pdf 
-used on input line 101.
+used on input line 103.
 (pdftex.def)             Requested size: 156.7823pt x 118.0772pt.
 Package epstopdf Info: Source file: <images/test_points_eval.eps>
 (epstopdf)                    date: 2017-03-14 14:25:06
@@ -768,7 +763,7 @@ s-converted-to.pdf images/test_points_eval.eps>
 (epstopdf)             \includegraphics on input line 114.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_points_eval-eps-converted-to.pdf, id=36, 834.11626pt x 657.45625pt
+<images/test_points_eval-eps-converted-to.pdf, id=44, 834.11626pt x 657.45625pt
 >
 File: images/test_points_eval-eps-converted-to.pdf Graphic file (type pdf)
  <use images/test_points_eval-eps-converted-to.pdf>
@@ -787,145 +782,142 @@ s-converted-to.pdf images/test_points_hist.eps>
 (epstopdf)             \includegraphics on input line 115.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/test_points_hist-eps-converted-to.pdf, id=37, 796.9775pt x 617.30624pt>
+<images/test_points_hist-eps-converted-to.pdf, id=45, 796.9775pt x 617.30624pt>
 File: images/test_points_hist-eps-converted-to.pdf Graphic file (type pdf)
 <use images/test_points_hist-eps-converted-to.pdf>
 Package pdftex.def Info: images/test_points_hist-eps-converted-to.pdf used on i
 nput line 115.
 (pdftex.def)             Requested size: 128.03902pt x 99.16663pt.
- [2 <./images/split_function_visualitions_3-eps-converted-to.pdf> <./images/spl
-it_function_visualitions_5-eps-converted-to.pdf> <./images/leaf_node_distributi
-ons_1-eps-converted-to.pdf> <./images/test_points_eval-eps-converted-to.pdf> <.
-/images/test_points_hist-eps-converted-to.pdf>] <images/ax_5_trees.png, id=81, 
-1003.5894pt x 729.927pt>
+
+<images/ax_5_trees.png, id=46, 1003.5894pt x 729.927pt>
 File: images/ax_5_trees.png Graphic file (type png)
 
 <use images/ax_5_trees.png>
-Package pdftex.def Info: images/ax_5_trees.png used on input line 126.
+Package pdftex.def Info: images/ax_5_trees.png used on input line 129.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/ax_20_trees.png, id=82, 1003.5894pt x 729.927pt>
+<images/ax_20_trees.png, id=47, 1003.5894pt x 729.927pt>
 File: images/ax_20_trees.png Graphic file (type png)
 
 <use images/ax_20_trees.png>
-Package pdftex.def Info: images/ax_20_trees.png used on input line 127.
+Package pdftex.def Info: images/ax_20_trees.png used on input line 130.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/ax_100_trees.png, id=83, 1003.5894pt x 729.927pt>
+<images/ax_100_trees.png, id=48, 1003.5894pt x 729.927pt>
 File: images/ax_100_trees.png Graphic file (type png)
 
 <use images/ax_100_trees.png>
-Package pdftex.def Info: images/ax_100_trees.png used on input line 128.
+Package pdftex.def Info: images/ax_100_trees.png used on input line 131.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
-<images/ax_200_trees.png, id=84, 1003.5894pt x 707.7642pt>
+<images/ax_200_trees.png, id=49, 1003.5894pt x 707.7642pt>
 File: images/ax_200_trees.png Graphic file (type png)
 
 <use images/ax_200_trees.png>
-Package pdftex.def Info: images/ax_200_trees.png used on input line 129.
+Package pdftex.def Info: images/ax_200_trees.png used on input line 132.
 (pdftex.def)             Requested size: 104.51888pt x 73.70724pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
-[]\OT1/cmr/m/n/10 Next, we vary the num-ber of split func-tions,
- []
-
-<images/splitNum_3.png, id=85, 1003.5894pt x 703.428pt>
+ [2 <./images/split_function_visualitions_5-eps-converted-to.pdf> <./images/lea
+f_node_distributions_1-eps-converted-to.pdf> <./images/test_points_eval-eps-con
+verted-to.pdf> <./images/test_points_hist-eps-converted-to.pdf> <./images/ax_5_
+trees.png (PNG copy)> <./images/ax_20_trees.png (PNG copy)> <./images/ax_100_tr
+ees.png (PNG copy)> <./images/ax_200_trees.png (PNG copy)>] <images/splitNum_3.
+png, id=85, 1003.5894pt x 703.428pt>
 File: images/splitNum_3.png Graphic file (type png)
 
 <use images/splitNum_3.png>
-Package pdftex.def Info: images/splitNum_3.png used on input line 141.
+Package pdftex.def Info: images/splitNum_3.png used on input line 144.
 (pdftex.def)             Requested size: 104.51888pt x 73.25568pt.
 
 <images/splitNum_5.png, id=86, 1003.5894pt x 729.927pt>
 File: images/splitNum_5.png Graphic file (type png)
 
 <use images/splitNum_5.png>
-Package pdftex.def Info: images/splitNum_5.png used on input line 142.
+Package pdftex.def Info: images/splitNum_5.png used on input line 145.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
 <images/splitNum_7.png, id=87, 1003.5894pt x 729.927pt>
 File: images/splitNum_7.png Graphic file (type png)
 
 <use images/splitNum_7.png>
-Package pdftex.def Info: images/splitNum_7.png used on input line 143.
+Package pdftex.def Info: images/splitNum_7.png used on input line 146.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
 <images/splitNum_15.png, id=88, 1003.5894pt x 725.5908pt>
 File: images/splitNum_15.png Graphic file (type png)
 
 <use images/splitNum_15.png>
-Package pdftex.def Info: images/splitNum_15.png used on input line 144.
+Package pdftex.def Info: images/splitNum_15.png used on input line 147.
 (pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
 
 <images/tree_depth_3.png, id=89, 1003.5894pt x 729.927pt>
 File: images/tree_depth_3.png Graphic file (type png)
 
 <use images/tree_depth_3.png>
-Package pdftex.def Info: images/tree_depth_3.png used on input line 154.
+Package pdftex.def Info: images/tree_depth_3.png used on input line 163.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
 <images/tree_depth_5.png, id=90, 1003.5894pt x 729.927pt>
 File: images/tree_depth_5.png Graphic file (type png)
 
 <use images/tree_depth_5.png>
-Package pdftex.def Info: images/tree_depth_5.png used on input line 155.
+Package pdftex.def Info: images/tree_depth_5.png used on input line 164.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
 <images/tree_depth_7.png, id=91, 1003.5894pt x 729.927pt>
 File: images/tree_depth_7.png Graphic file (type png)
 
 <use images/tree_depth_7.png>
-Package pdftex.def Info: images/tree_depth_7.png used on input line 156.
+Package pdftex.def Info: images/tree_depth_7.png used on input line 165.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
 
 <images/tree_depth_9.png, id=92, 1003.5894pt x 729.927pt>
 File: images/tree_depth_9.png Graphic file (type png)
 
 <use images/tree_depth_9.png>
-Package pdftex.def Info: images/tree_depth_9.png used on input line 157.
+Package pdftex.def Info: images/tree_depth_9.png used on input line 166.
 (pdftex.def)             Requested size: 104.51888pt x 76.0153pt.
- [3 <./images/ax_5_trees.png (PNG copy)> <./images/ax_20_trees.png (PNG copy)> 
-<./images/ax_100_trees.png (PNG copy)> <./images/ax_200_trees.png (PNG copy)> <
-./images/splitNum_3.png (PNG copy)> <./images/splitNum_5.png (PNG copy)> <./ima
-ges/splitNum_7.png (PNG copy)> <./images/splitNum_15.png (PNG copy)> <./images/
-tree_depth_3.png (PNG copy)> <./images/tree_depth_5.png (PNG copy)> <./images/t
-ree_depth_7.png (PNG copy)> <./images/tree_depth_9.png (PNG copy)>] <images/axi
-s.png, id=99, 1003.5894pt x 725.5908pt>
+
+<images/axis.png, id=93, 1003.5894pt x 725.5908pt>
 File: images/axis.png Graphic file (type png)
-
-<use images/axis.png>
-Package pdftex.def Info: images/axis.png used on input line 172.
+ <use images/axis.png>
+Package pdftex.def Info: images/axis.png used on input line 176.
 (pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
- <images/linear.png, id=100, 1003.5894pt x 725.5908pt>
+
+<images/linear.png, id=94, 1003.5894pt x 725.5908pt>
 File: images/linear.png Graphic file (type png)
-
-<use images/linear.png>
-Package pdftex.def Info: images/linear.png used on input line 173.
+ <use images/linear.png>
+Package pdftex.def Info: images/linear.png used on input line 177.
 (pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
- <images/quad.png, id=101, 1003.5894pt x 725.5908pt>
+
+<images/quad.png, id=95, 1003.5894pt x 725.5908pt>
 File: images/quad.png Graphic file (type png)
-
-<use images/quad.png>
-Package pdftex.def Info: images/quad.png used on input line 174.
+ <use images/quad.png>
+Package pdftex.def Info: images/quad.png used on input line 178.
 (pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
- <images/cubic.png, id=102, 1003.5894pt x 725.5908pt>
+
+<images/cubic.png, id=96, 1003.5894pt x 725.5908pt>
 File: images/cubic.png Graphic file (type png)
-
-<use images/cubic.png>
-Package pdftex.def Info: images/cubic.png used on input line 175.
+ <use images/cubic.png>
+Package pdftex.def Info: images/cubic.png used on input line 179.
 (pdftex.def)             Requested size: 104.51888pt x 75.56374pt.
- <images/confus.png, id=103, 1003.5894pt x 707.7642pt>
-File: images/confus.png Graphic file (type png)
 
-<use images/confus.png>
-Package pdftex.def Info: images/confus.png used on input line 185.
-(pdftex.def)             Requested size: 128.03902pt x 90.29543pt.
- <images/images.png, id=104, 1003.5894pt x 729.927pt>
+[3 <./images/splitNum_3.png (PNG copy)> <./images/splitNum_5.png (PNG copy)> <.
+/images/splitNum_7.png (PNG copy)> <./images/splitNum_15.png (PNG copy)> <./ima
+ges/tree_depth_3.png (PNG copy)> <./images/tree_depth_5.png (PNG copy)> <./imag
+es/tree_depth_7.png (PNG copy)> <./images/tree_depth_9.png (PNG copy)> <./image
+s/axis.png (PNG copy)> <./images/linear.png (PNG copy)> <./images/quad.png (PNG
+ copy)> <./images/cubic.png (PNG copy)>]
+<images/images.png, id=103, 1003.5894pt x 729.927pt>
 File: images/images.png Graphic file (type png)
+ <use images/images.png>
+Package pdftex.def Info: images/images.png used on input line 189.
+(pdftex.def)             Requested size: 261.3012pt x 190.04384pt.
 
-<use images/images.png>
-Package pdftex.def Info: images/images.png used on input line 186.
-(pdftex.def)             Requested size: 128.03902pt x 93.12292pt.
+<images/confus.png, id=104, 1003.5894pt x 707.7642pt>
+File: images/confus.png Graphic file (type png)
+ <use images/confus.png>
+Package pdftex.def Info: images/confus.png used on input line 197.
+(pdftex.def)             Requested size: 182.91003pt x 128.99039pt.
 Package epstopdf Info: Source file: <images/numBins_acc.eps>
 (epstopdf)                    date: 2017-03-14 14:25:13
 (epstopdf)                    size: 27894 bytes
@@ -934,7 +926,7 @@ Package epstopdf Info: Source file: <images/numBins_acc.eps>
 (epstopdf)                    size: 10692 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/numBins_acc-eps-con
 verted-to.pdf images/numBins_acc.eps>
-(epstopdf)             \includegraphics on input line 201.
+(epstopdf)             \includegraphics on input line 209.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/numBins_acc-eps-converted-to.pdf, id=105, 843.15pt x 691.58376pt>
@@ -942,7 +934,7 @@ File: images/numBins_acc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/numBins_acc-eps-converted-to.pdf>
 Package pdftex.def Info: images/numBins_acc-eps-converted-to.pdf used on input 
-line 201.
+line 209.
 (pdftex.def)             Requested size: 128.03902pt x 105.02051pt.
 Package epstopdf Info: Source file: <images/numBins_complexity.eps>
 (epstopdf)                    date: 2017-03-14 14:25:06
@@ -953,7 +945,7 @@ Package epstopdf Info: Source file: <images/numBins_complexity.eps>
 (epstopdf)                    size: 10786 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/numBins_complexity-
 eps-converted-to.pdf images/numBins_complexity.eps>
-(epstopdf)             \includegraphics on input line 202.
+(epstopdf)             \includegraphics on input line 210.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/numBins_complexity-eps-converted-to.pdf, id=106, 848.16875pt x 691.5837
@@ -961,7 +953,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: images/numBins_complexity-eps-converted-to.pdf Graphic file (type pdf)
  <use images/numBins_complexity-eps-converted-to.pdf>
 Package pdftex.def Info: images/numBins_complexity-eps-converted-to.pdf used on
- input line 202.
+ input line 210.
 (pdftex.def)             Requested size: 128.03902pt x 104.3979pt.
 Package epstopdf Info: Source file: <images/numTrees_acc.eps>
 (epstopdf)                    date: 2017-03-14 11:51:00
@@ -971,7 +963,7 @@ Package epstopdf Info: Source file: <images/numTrees_acc.eps>
 (epstopdf)                    size: 10435 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/numTrees_acc-eps-co
 nverted-to.pdf images/numTrees_acc.eps>
-(epstopdf)             \includegraphics on input line 212.
+(epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/numTrees_acc-eps-converted-to.pdf, id=107, 867.24pt x 691.58376pt>
@@ -979,7 +971,7 @@ File: images/numTrees_acc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/numTrees_acc-eps-converted-to.pdf>
 Package pdftex.def Info: images/numTrees_acc-eps-converted-to.pdf used on input
- line 212.
+ line 220.
 (pdftex.def)             Requested size: 128.03902pt x 102.09741pt.
 Package epstopdf Info: Source file: <images/numTrees_complexity.eps>
 (epstopdf)                    date: 2017-03-14 11:51:14
@@ -990,7 +982,7 @@ o.pdf>
 (epstopdf)                    size: 9701 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/numTrees_complexity
 -eps-converted-to.pdf images/numTrees_complexity.eps>
-(epstopdf)             \includegraphics on input line 213.
+(epstopdf)             \includegraphics on input line 221.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/numTrees_complexity-eps-converted-to.pdf, id=108, 856.19875pt x 691.583
@@ -998,13 +990,8 @@ Package epstopdf Info: Output file is already uptodate.
 File: images/numTrees_complexity-eps-converted-to.pdf Graphic file (type pdf)
  <use images/numTrees_complexity-eps-converted-to.pdf>
 Package pdftex.def Info: images/numTrees_complexity-eps-converted-to.pdf used o
-n input line 213.
+n input line 221.
 (pdftex.def)             Requested size: 128.03902pt x 103.4165pt.
- [4 <./images/axis.png (PNG copy)> <./images/linear.png (PNG copy)> <./images/q
-uad.png (PNG copy)> <./images/cubic.png (PNG copy)> <./images/confus.png (PNG c
-opy)> <./images/images.png (PNG copy)> <./images/numBins_acc-eps-converted-to.p
-df> <./images/numBins_complexity-eps-converted-to.pdf> <./images/numTrees_acc-e
-ps-converted-to.pdf> <./images/numTrees_complexity-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/numSplits_acc.eps>
 (epstopdf)                    date: 2017-03-14 11:54:19
 (epstopdf)                    size: 24725 bytes
@@ -1014,15 +1001,15 @@ Package epstopdf Info: Source file: <images/numSplits_acc.eps>
 (epstopdf)                    size: 10381 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/numSplits_acc-eps-c
 onverted-to.pdf images/numSplits_acc.eps>
-(epstopdf)             \includegraphics on input line 224.
+(epstopdf)             \includegraphics on input line 232.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/numSplits_acc-eps-converted-to.pdf, id=144, 853.1875pt x 696.6025pt>
+<images/numSplits_acc-eps-converted-to.pdf, id=109, 853.1875pt x 696.6025pt>
 File: images/numSplits_acc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/numSplits_acc-eps-converted-to.pdf>
 Package pdftex.def Info: images/numSplits_acc-eps-converted-to.pdf used on inpu
-t line 224.
+t line 232.
 (pdftex.def)             Requested size: 128.03902pt x 104.539pt.
 Package epstopdf Info: Source file: <images/numSplits_complexity.eps>
 (epstopdf)                    date: 2017-03-14 11:45:32
@@ -1033,16 +1020,20 @@ to.pdf>
 (epstopdf)                    size: 11174 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/numSplits_complexit
 y-eps-converted-to.pdf images/numSplits_complexity.eps>
-(epstopdf)             \includegraphics on input line 225.
+(epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/numSplits_complexity-eps-converted-to.pdf, id=145, 842.14626pt x 696.60
+<images/numSplits_complexity-eps-converted-to.pdf, id=110, 842.14626pt x 696.60
 25pt>
 File: images/numSplits_complexity-eps-converted-to.pdf Graphic file (type pdf)
  <use images/numSplits_complexity-eps-converted-to.pdf>
 Package pdftex.def Info: images/numSplits_complexity-eps-converted-to.pdf used 
-on input line 225.
+on input line 233.
 (pdftex.def)             Requested size: 128.03902pt x 105.91019pt.
+ [4 <./images/images.png (PNG copy)> <./images/confus.png (PNG copy)> <./images
+/numBins_acc-eps-converted-to.pdf> <./images/numBins_complexity-eps-converted-t
+o.pdf> <./images/numTrees_acc-eps-converted-to.pdf> <./images/numTrees_complexi
+ty-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/depth_acc.eps>
 (epstopdf)                    date: 2017-03-14 13:23:54
 (epstopdf)                    size: 23502 bytes
@@ -1051,7 +1042,7 @@ Package epstopdf Info: Source file: <images/depth_acc.eps>
 (epstopdf)                    size: 9885 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/depth_acc-eps-conve
 rted-to.pdf images/depth_acc.eps>
-(epstopdf)             \includegraphics on input line 235.
+(epstopdf)             \includegraphics on input line 243.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/depth_acc-eps-converted-to.pdf, id=146, 853.1875pt x 676.5275pt>
@@ -1059,7 +1050,7 @@ File: images/depth_acc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/depth_acc-eps-converted-to.pdf>
 Package pdftex.def Info: images/depth_acc-eps-converted-to.pdf used on input li
-ne 235.
+ne 243.
 (pdftex.def)             Requested size: 128.03902pt x 101.52635pt.
 Package epstopdf Info: Source file: <images/depth_complexity.eps>
 (epstopdf)                    date: 2017-03-14 14:05:56
@@ -1070,7 +1061,7 @@ df>
 (epstopdf)                    size: 10016 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/depth_complexity-ep
 s-converted-to.pdf images/depth_complexity.eps>
-(epstopdf)             \includegraphics on input line 236.
+(epstopdf)             \includegraphics on input line 244.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/depth_complexity-eps-converted-to.pdf, id=147, 836.12375pt x 696.6025pt
@@ -1078,7 +1069,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: images/depth_complexity-eps-converted-to.pdf Graphic file (type pdf)
  <use images/depth_complexity-eps-converted-to.pdf>
 Package pdftex.def Info: images/depth_complexity-eps-converted-to.pdf used on i
-nput line 236.
+nput line 244.
 (pdftex.def)             Requested size: 128.03902pt x 106.66487pt.
 
 No file mlcv.bbl.
@@ -1091,8 +1082,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  13847 strings out of 493014
- 247288 string characters out of 6133351
- 299751 words of memory out of 5000000
+ 247282 string characters out of 6133351
+ 298751 words of memory out of 5000000
  17225 multiletter control sequences out of 15000+600000
  8722 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1109,7 +1100,7 @@ al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
 ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on mlcv.pdf (5 pages, 5791388 bytes).
+Output written on mlcv.pdf (5 pages, 5791257 bytes).
 PDF statistics:
  222 PDF objects out of 1000 (max. 8388607)
  138 compressed objects within 2 object streams
