@@ -2,10 +2,12 @@ numBins = 128;
 treeNum = [10,50,150];
 depth = [3,4,5,6,7,8,9,10];
 split = 3;
-learner_t = {'axis-aligned', 'two-pixel','linear'};
+learner_t = {'axis-aligned', 'two-pixel'};
 
 accuracy_rf_all=zeros(numel(treeNum), numel(depth), numel(learner_t));
 buildCodebookTime_all=zeros(numel(treeNum), numel(depth), numel(learner_t));
+buildRfClassifierime_all=zeros(numel(treeNum), numel(depth), numel(learner_t));
+
 
 for index=1:numel(treeNum)
     for kindex=1:numel(learner_t)
@@ -17,8 +19,9 @@ for index=1:numel(treeNum)
             load(filename);
             accuracy_rf_all(index, jindex, kindex)=accuracy_rf;
             buildCodebookTime_all(index, jindex, kindex)=buildCodebookTime;
+            buildRfClassifierime_all(index, jindex, kindex)=buildRFTime;
         end
     end
 end
 
-clearvars -except buildCodebookTime_all accuracy_rf_all depth treeNum numBins split
+clearvars -except buildCodebookTime_all buildRfClassifierime_all accuracy_rf_all depth treeNum numBins split
