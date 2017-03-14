@@ -180,9 +180,32 @@ The entirety of the discussion above has all been made with respect to the axis-
     \caption{Overview of spectral subtraction process}
 \end{figure}
 
+
+\section{K-means Codebook}
+
+\subsection*{Vocabulary Size}
+
+Using the K-means algorithm to form a Bag-of-Words (BoW) representation, we have direct control over vocabulary size. The vocabulary is going to consist of exactly K codewords. The BoW can be interpreted as a dimensionality reduction technique that shrinks an image into a histogram which indicates the frequency of occurrence of each codewords in our vocabulary. Note that classification is performed using only the histogram and the physical meaning of each codeword is not relevant to the random forest classifier. In fact, more often than not, codewodes do not match heurestic features such as eyes or wheels. With that in mind, it should be noted that the performance of the classifier is heavily dependent on richness of the vocabulary. To form the K-means codebook, matlab's inbuilt function \texttt{kmeans} is used; matlab implements the K-means++ algorithm (QUOTE THIS SHIT), which exhibits a complexity of $\mathcal{O}(\text{log} \ \text{K})$.
+
+\subsection*{Vector Quantisation Process}
+
+The first step in the vector quantisation process involves extracting Scale Invariant Feature Transform (SIFT) descriptors for each image in our training dataset. Extraction is performed using the function \texttt{vl\_phow}, which comes with the reference code provided for this coursework. The function outputs 128-dimensional descriptors; note that the number of descriptors returned depends on the image. After obtaining descriptors for each image in the training dataset, 100,000 descriptors are randomly selected to form a intermediate dataset in a 128-dimensional vector space. This intermediate dataset is fed into the K-means algorithm; only 100,000 descriptors are used to place reasonable bounds the computational complexity both in terms of time and memory. The K-means algorithm will return K cluster centers, where K represents the size of our codebook.
+
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.49\columnwidth]{hist_10}
+    \includegraphics[width=0.49\columnwidth]{hist_512}
+    \caption{Overview of spectral subtraction process}
+    \label{fig:hists}
+\end{figure}
+
+
+The final step of the vector quantisation process is to build a BoW histogram for each image in the training dataset; for this, all of the descriptors returned by \texttt{vl\_phow} for a single image are compared to the cluster centers using matlab's inbuilt function \texttt{knnsearch}. The euclidean distance between each cluster center and each descriptor is found. The center which is closest to the descriptor in the 128-dimensional descriptor space is returned by \texttt{knnsearch}. Occurrences of each cluster center are accumulated and normalized to form a histogram. The figure below shows the averaged histograms for classes 1, 4 and 7 with the two different vocabulary sizes. 
+
+
 \section{RF Classifier}
 
-The RF is trained using the a vocabulary, consisting of 128 codewords, generated using the K-means algorithm; performance is then tested. Example success and failures are visualized below.  Heuristic explanations can be made for some of the misclassifications that are observed. For example, the left-most watch has the characteristic 'spoty' phase transition and circular edges that are observed in wild cats. All misclassifications however cannot be explained heuristically. Two water lilies, which to the human eye are almost identical, were classified very differently. 
+The RF classifier is trained using a histograms obtained from a codebook, consisting of 256 codewords; performance is then tested. Example successes and failures are visualized below.  Heuristic explanations can be made for some of the misclassifications that are observed. For example, the left-most watch has the characteristic 'spoty' phase transition and circular edges that are observed in wild cats. All misclassifications however cannot be explained heuristically. Two water lilies, which to the human eye are almost identical, were classified very differently. 
 
 \begin{figure}[H]
 	\centering
@@ -201,19 +224,23 @@ In general, instead of looking at individual successes and failure, the results 
 
 \subsection*{Vocabulary Size}
 
-Using the K-means algorithm to form a Bag-of-Words (BoW) representation, we have direct control over vocabulary size. The BoW can be interpreted as a dimensionality reduction technique that shrinks an image into a histogram indicating the frequency of occurrence of codewords, which in this case are the cluster centers. Using a small vocabulary, the dimension of the space in which the Random Forest Classifier acts is small. The classes will be harder to separate in a low dimensional space. As such, we observe that increasing the number of bins, thereby increasing the vocabulary size, we obtain a greater classification accuracy. 
+Using a small vocabulary, the dimension of the space in which the RF classifier acts is small. The classes will be harder to separate in a low dimensional space. Both the numerical results in Figure \ref{fig:bins_acc} and the averaged histograms in Figure \ref{fig:hists} concretely prove that increasing the number of bins results in improved classification accuracy.
 
-Notice however the performance increase by increasing the vocabulary size from 512 to 1024 is marginal, when there are 50 or 150 trees in our forest. Performance drops when an extremely large number of bins are used but the number of trees is kept low. With 1024 codewords in our dictionary, the $E_{av}$ is high. The high error that each tree incurs can either by averaged away using the committee machine, or by increasing depth and the number of split functions tried, we can lower $E_{av}$. 
+Notice however that the performance increase obtained by increasing the vocabulary size from 512 to 1024 is marginal. In fact, performance drops when an extremely large number of bins are used in conjunction with a small number of trees in the RF classifier. Although 1024 codewords gives us greater discriminating power, if the RF classifier parameters are not tuned to take into account the increase in the vocabulary size, $E_{av}$ will be high. The high error that each tree incurs can either by averaged away using the committee machine, or by increasing depth and the number of split functions tried at each node, we can lower $E_{av}$. Again, the increase in discriminating power that is associated with an increase in the number of codewords does not carry on infinitely. If the ratio of cluster centers to training points is too high, each codewords will start to lose meaning. 
+
+As mentioned above, the K-means++ algorithm that matlab implements scales with $\mathcal{O}(\text{log} \ \text{K})$.
+
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.49\columnwidth]{numBins_acc}
 	\includegraphics[width=0.49\columnwidth]{numBins_complexity}
     \caption{Overview of spectral subtraction process}
+    \label{fig:bins_acc}
 \end{figure}
 
 \subsection*{Number of Trees}
 
-The graphs below corroborate the discussion above about the effects that the number of trees has on performance of the Random Forest algorithm. Regardless of the vocabulary size, increasing the number of trees yields an increase in performance. However, setting  \texttt{numTrees} to be greater that $180$ does not lead to any significant improvements in the recognition accuracy. Also, we observe that increasing the number of trees causes computational complexity to grow linear. Note that, no parallel processing has been done as of yet; the algorithm is susceptible to parallelism. 
+The graphs below corroborate the discussion above about the effects that \texttt{numTrees} has. Regardless of the vocabulary size, increasing the number of trees yields an increase in performance. However, setting  \texttt{numTrees} to be greater that $180$ does not lead to any significant improvements in the recognition accuracy. Also, we observe that increasing the number of trees causes computational complexity to grow linearly. Note that, no parallel processing has been done as of yet; the algorithm is susceptible to parallelism. 
 
 \begin{figure}[H]
 	\centering
@@ -225,7 +252,7 @@ The graphs below corroborate the discussion above about the effects that the num
 
 \subsection*{Number of Split Functions}
 
-Again, the graphs below corroborate the discussion above about the effects of increasing the number of split functions. We observed visually that setting \texttt{numSplits} to be small lead to artifacts appearing the Toy Spiral data. These artifacts are analogous to the poor recognition accuracy obtained in the figure below. We also observed that setting \texttt{numSplits} to be large, overfitting started to occur. Again, we observe this numerically as the performance starts to decrease after a certain point. Although the general patterns are similar, notice how different the scales are. For performance to drop, we need to set the number of split functions tested at each node to be 150. The reason for this is that instead of seperating points in a 2-dimensional space as in the case of the Toy Spiral data, we are now separating points in much higher dimensions. In fact, the graphs below are obtained using a vocabulary consisting of 256 codewords. As such, to correlate the trees in such a large dimension, we need to try a lot of split functions. 
+Again, the graphs below corroborate the discussion above about the effects of increasing the number of split functions. We observed visually that setting \texttt{numSplits} to be small lead to artifacts appearing the Toy Spiral data. These artifacts are analogous to the poor recognition accuracy obtained in the figure below. We also observed that by setting \texttt{numSplits} to be extremely large, overfitting and tree interdependence would set in. Again, this is analagous to a reduction in performance after a certain point. Although the general patterns are similar, notice how different the scales are. For performance to drop, we need to set the number of split functions tested at each node to be 150. The reason for this is that instead of separating points in a 2-dimensional space as in the case of the Toy Spiral data, we are now separating points in much higher dimensions. In fact, the graphs below are obtained using a vocabulary consisting of 256 codewords. As such, to overfit the data and correlate the trees in such a large dimension, we need to try a lot of split functions. 
 
 \begin{figure}[H]
 	\centering
