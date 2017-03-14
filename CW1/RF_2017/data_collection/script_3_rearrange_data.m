@@ -1,6 +1,6 @@
-numBins = 128;
-treeNum = [10,50,150];
-depth = [3,4,5,6,7,8,9,10];
+numBins = 256;
+treeNum = [10];
+depth = [3,4,5,6,7,8,9,10,11,12,13,14,15];
 split = 3;
 learner_t = {'axis-aligned', 'two-pixel'};
 
