@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{minted}
+
+\title{matlab code}
+\author{sagarpatel9410 }
+\date{March 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{Appendix}
+
+\begin{listing}
+\begin{minted}{matlab}
+    idx = randsample(N,ceil(N),1); 
+\end{minted}
+\caption{Bootstrap Aggregating with Replacement}
+\end{listing}
+
+
+\begin{listing}
+\begin{minted}{matlab}
+%axis aligned
+function [idx_, dim, t] = axis_aligned(D, data)
+    % Pick one random dimension
+    % We use D-1 because the last column will hold the class
+    dim = randi(D-1);
+    % Find the data range of this dimension
+    d_min = single(min(data(:,dim))) + eps; 
+    d_max = single(max(data(:,dim))) - eps;
+    % Pick a random value within the range as threshold
+    t = d_min + rand*((d_max-d_min)); 
+    % return the index of the left node
+    idx_ = data(:,dim) < t;
+end
+\end{minted}
+\caption{Axis Aligned Split Function}
+\end{listing}
+
+
+\begin{listing}
+\begin{minted}{matlab}
+%two pixel test
+function [idx_, dim, t] = two_pixel_test( D, data )
+    %generate two random dimensions
+    dim = randperm(D-1);
+    %find data range after applying two pixel test
+    d_min = single(min(data(:,dim(1)) - data(:,dim(2)))) + eps;
+    d_max = single(max(data(:,dim(1)) - data(:,dim(2)))) - eps;
+    
+    % Pick a random value within the range as threshold
+    t = d_min + rand*((d_max-d_min));
+    % return the index of the left node
+    idx_ = (data(:,dim(1)) - data(:,dim(2))) < t;
+
+end
+\end{minted}
+
+
+\caption{Two Pixel Split Function}
+\end{listing}
+
+\begin{listing}
+\begin{minted}{matlab}
+    idx = randsample(N,ceil(N),1); 
+\end{minted}\caption{Linear Learner Split Function}
+\end{listing}
+
+\begin{listing}
+\inputminted{matlab}{quadlinlearner.m}
+\caption{Quadratic Split Function}
+\end{listing}
+
+\begin{listing}
+\inputminted{matlab}{cubiclearner.m}
+\caption{Quadratic Split Function}
+\end{listing}
+
+\begin{listing}
+\inputminted{matlab}{kmeanscodebook.m}
+\caption{Building Visual Codebook using K-means, Bag of Words Histogram for Training Images}
+\end{listing}
+
+\begin{listing}
+\inputminted{matlab}{kmeanstestimages.m}
+\caption{Bag of Words Histogram for Training Images using K-means Visual Codebook}
+\end{listing}
+
+
+\begin{listing}
+\inputminted{matlab}{rfcodebook.m}
+\caption{Build Visual Codebook using Random Forest, Bag of Words Histogram for Training Images}
+\end{listing}
+
+\begin{listing}
+\inputminted{matlab}{rftestImages.m}
+\caption{Bag of Words Histogram for Training Images using RF Visual Codebook}
+\end{listing}
+
+\end{document}

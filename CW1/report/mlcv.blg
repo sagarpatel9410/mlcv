@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: mlcv.aux
+The style file: unsrt.bst
+Database file #1: mlcv_bib.bib
+You've used 1 entry,
+            1791 wiz_defined-function locations,
+            452 strings with 3746 characters,
+and the built_in function-call counts, 430 in all, are:
+= -- 46
+> -- 8
+< -- 1
++ -- 3
+- -- 2
+* -- 22
+:= -- 58
+add.period$ -- 4
+call.type$ -- 1
+change.case$ -- 1
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 23
+empty$ -- 42
+format.name$ -- 2
+if$ -- 106
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 1
+pop$ -- 6
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 18
+stack$ -- 0
+substring$ -- 40
+swap$ -- 13
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 4
+width$ -- 2
+write$ -- 14

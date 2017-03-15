@@ -1,5 +1,4 @@
-\documentclass[a4paper,pra,twocolumn,10pt,aps,longbibliography,nobalancelastpage]{revtex4-1}
-
+\documentclass[a4paper,pra,twocolumn,10pt,aps,longbibliography,nobalancelastpage]{article}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -10,6 +9,7 @@
 \usepackage{capt-of}
 \usepackage{xfrac}
 \graphicspath{{images/}}
+
 
 \geometry{
  	a4paper,
@@ -37,11 +37,11 @@ training data used to grow each tree in the random decision forest. The in-built
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.60\columnwidth]{boot_strap}
-    \caption{Overview of spectral subtraction process}
+    \caption{Random dataset generation using Bagging}
     \label{fig:boot_strap}
 \end{figure}
 
-The resulting data subsets have been visualized in Figure \ref{fig:boot_strap}. Each data subset has 150 points however the spirals are not complete. This is due to the fact that samples are drawn from the training dataset with replacement. The amount of uniqueness in within each subset is presented in Figure \ref{fig:boot_strap} as well.  Ideally, as the size of our training dataset increases, the uniqueness should approach $63.3\%$. The finite size of our training dataset results in uniqueness values spread around the ideal. The table below shows the probability distributions of each class within each data subset. The roughly equal distributions corroborate the fact that sampling was performed uniformly.
+The resulting data subsets have been visualized in Figure \ref{fig:boot_strap}. Each data subset has 150 points; however the spirals are not complete. This is due to the fact that samples are drawn from the training dataset with replacement. The amount of uniqueness within each subset is presented in Figure \ref{fig:boot_strap} as well.  Ideally, as the size of our training dataset increases, the uniqueness should approach $63.3\%$. The finite size of our training dataset results in uniqueness values spread around the ideal. The table below shows the probability distributions of each class within each data subset. The roughly equal distributions corroborate the fact that sampling was performed uniformly.
 
 \begin{table}[H]
 \centering
@@ -59,71 +59,66 @@ Dataset Index & Class Probabilities 		\\ \hline
 
 The first step in the training of the decision forest is to develop the weak-learner functions that will be used to split the data at each node of the tree. Multiple weak-learner functions were implemented, namely axis-aligned, two-pixel, linear, quadratic and cubic.
 
-\begin{align}
-h(\textbf{v}, \theta) = [&a_1x_1^2+a_2x_2^2+a_3x_1x_2+a_4x_1+a_5x_2>\tau] \label{eq:quad_split} \\
-h(\textbf{v}, \theta) = [&a_1x_1^3+a_2x_2^3+a_3x_1^2x_2+a_4x_1x_2^2+a_5x_1^2 \nonumber\\
-&+a_6x_2^2+a_7x_1x_2+a_8x_1+a_9x_2>\tau] \label{eq:cubic_split}
-\end{align}
 
 Note that the axis-aligned, two-pixel and linear learners have the general form presented in the lecture notes whereas the quadratic and cubic split functions have the form expressed in (\ref{eq:quad_split}) and (\ref{eq:cubic_split}) respectively. The quadratic and cubic learners are non-linear in 2-dimensional space but are implemented by transforming the data and using linear separators.
 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.60\columnwidth]{split_function_visualitions_1}
-    \caption{Overview of spectral subtraction process}
+    \caption{Weak-Learners Trained on Large Number of Points, small value of \texttt{numSplit}}
     \label{fig:ex_func}
 \end{figure}
 
-Example split functions for all learners, except the two-pixel test are presented in Figure \ref{fig:ex_func}. The two-pixel test does not perform well with 2-dimensional data. The results are indicative of the fact that a stronger class of learner functions does not necessarily translate into a greater information gain; this is especially true if the number of split functions over which optimization is performed is small.
+Example split functions for all learners, except the two-pixel test, are presented in Figure \ref{fig:ex_func}. The two-pixel test does not perform well with 2-dimensional data. The results are indicative of the fact that a stronger class of learner functions does not necessarily translate into a greater information gain; this is especially true if the number of split functions over which optimization is performed is small.
 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.60\columnwidth]{split_function_visualitions_3}
-    \caption{Overview of spectral subtraction process}
+    \caption{Weak-Learners Trained on Small Number of Points}
     \label{fig:learners_2}
 \end{figure}
 
-The graph in Figure \ref{fig:learners_2} shows what happens when a strong learning class is trained on a small number of data points. Observe the split function obtained for the quadratic and cubic learners; \textbf{there is clear over-fitting of the data.} This is completely in line with the results obtained from Vapnik--Chervonenkis (VC) theory. Quadratic and cubic functions have a larger VC dimension and trained on a small number of points, these classes overfit training data and do not generalize well. The random forest algorithm provides a mechanism, the committee machine, to combat over-fitting in each individual tree. As such, in the next section, it should be noted that if strong non-linear learners are used, the number of trees should also be increased to achieve the same performance as a weak-learner. 
+The graph in Figure \ref{fig:learners_2} shows what happens when a strong learning class is trained on a small number of data points. Observe the split function obtained for the quadratic and cubic learners; \textbf{there is clear over-fitting of the data.} This is completely consistent with the results obtained from Vapnik--Chervonenkis (VC) theory. Quadratic and cubic functions have a larger VC dimension and if trained on a small number of points, these classes overfit training data and do not generalize well. The random forest algorithm provides a mechanism, the committee machine, to combat over-fitting in each individual tree. As such, in the next section, it should be noted that if strong non-linear learners are used, the number of trees should also be increased to achieve the same performance as a weak-learner. 
 
-By simply analyzing Figure \ref{fig:ex_func} and \ref{fig:learners_2}, the advantages of using a stronger learning class are not clear. For this, we have to increase \texttt{param.splitNum}. Figure \ref{fig:learners_3} makes it clear that stronger learning classes are able to split the data more efficiently and obtain a higher information gain. The discriminating power of the learning classes is not obvious when the number of split functions tested is small however increasing \texttt{param.splitNum} clearly highlights the intrinsic discriminating power of each weak-learner. 
+By simply analyzing Figure \ref{fig:ex_func} and \ref{fig:learners_2}, the advantages of using a stronger learning class are not clear. For this, we have to increase \texttt{param.splitNum}. Figure \ref{fig:learners_3} makes it clear that stronger learning classes are able to split the data more efficiently and obtain a higher information gain. The discriminating power of the learning classes is not obvious when the number of split functions tested is small; however increasing \texttt{param.splitNum} clearly highlights the intrinsic discriminating power of each weak-learner. 
 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.60\columnwidth]{split_function_visualitions_5}
-    \caption{Overview of spectral subtraction process}
+    \caption{Weak-Learners with large value of \texttt{numSplit}}
     \label{fig:learners_3}
 \end{figure}
 
 Using a stronger learning class such as the quadratic or cubic non-linear functions has it benefits. They can increase the information gain at each node. However, when increasing the strength of the learning class one should also increase the number of split functions tested.
 
 \subsection{Growing Tree}
-The leaves visualized in the figure below were generated by growing a tree that utilizes axis-aligned weak-learners. Most leaves contain only one class of data points; the recursive splitting of the data points down the tree has a distilling effect. There are some leaves with 2 or more classes of data. This can be attributed to the difficulty in isolating classes near the origin where the training data is tightly clustered.
+The leafs visualized in the figure below were generated by growing a tree that utilizes axis-aligned weak-learners. Most leaves contain only one class of data points; the recursive splitting of the data points down the tree has a distilling effect. There are some leaves with 2 or more classes of data. This can be attributed to the difficulty in isolating classes near the origin where the training data is tightly clustered.
 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.60\columnwidth]{leaf_node_distributions_1}
-    \caption{Overview of spectral subtraction process}
+    \caption{Visualization of Leaf Nodes}
     \label{fig:leaf_nodes}
 \end{figure}
 
-The tree was built using two stopping criteria, used in conjunction. Firstly, a node is considered a leaf if less 5 training points reach it. If only 5 points arrive at a node, they will be concentrated within a small region. Training based on these points will lead to over-fitting. The second stopping criteria is the maximum tree depth. This is simple to implement and gives us direct control on the maximum number of leaves. Using the tree-depth to control the number of leaves will come in handy when growing an Random Forest codebook.
+The tree was built using two stopping criteria, used in conjunction. Firstly, a node is considered a leaf if less than 5 training points reach it. If only 5 points arrive at a node, they will be concentrated within a small region. Training based on these points will lead to over-fitting. The second stopping criteria is the maximum tree depth. This is simple to implement and gives us direct control on the maximum number of leaves. Using the tree-depth to control the number of leaves will come in handy when growing an Random Forest codebook.
 
-\section{Evaluating Decision Forest}
+\section{Evaluating Decision Forest}\label{sec:eval}
 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.49\columnwidth]{test_points_eval}
     \includegraphics[width=0.49\columnwidth]{test_points_hist}
-    \caption{Overview of spectral subtraction process}
+    \caption{Evaluation of Test Points}
     \label{fig:leaf_nodes}
 \end{figure}
 
 
-The 4 test points are evaluated on a forest containing 3 trees; the results obtained are visualized above. The histograms show the probability distribution functions at each leaf for each point. The averaged values have also been plotted. Note that test point 1 (-0.5, -0.7), has been mis-classified; ideally, the point should be blue. The reasons for this misclassification is multi-fold. One of the main factors is that he random forest only has 3 trees and thus the averaging effect of the committee machine is limited.
+The 4 test points are evaluated on a forest containing 3 trees; the results obtained are visualized above. The histograms show the probability distribution functions at each leaf for each point. The averaged values have also been plotted. Note that test point 1 (-0.5, -0.7), has been misclassified; ideally, the point should be blue. The reasons for this misclassification are multi-fold. One of the main factors is that the random forest only has 3 trees and thus the averaging effect of the committee machine is limited.
 
 \subsection{Varying Number of Trees}
 
-To directly combat the misclassification observed above, the first parameter that is varied is the number of trees in the forest. The graph below shows that increasing the number of trees has a considerable effect on the classification accuracy. This is especially true when the absolute number of trees is small. Increasing the number of tress from 100 to 200 has negligible effect. Notice the straight axis-aligned class boundaries obtained in the region of the grid for which extrapolation is required. Training data is contained within the unit square whereas the region for which the classifier is tested extends beyond the unit square. The classifier is expected to extrapolate the class boundaries. Since the axis-aligned weak-learner is used, straight axis-aligned lines are observed in the extrapolated region. 
+To directly combat the misclassification observed above, the first parameter that is varied is the number of trees in the forest. The graph below shows that increasing the number of trees has a considerable effect on the classification accuracy. This is especially true when the absolute number of trees is small. Increasing the number of trees from 100 to 200 has negligible effect. Notice the straight axis-aligned class boundaries obtained in the region of the grid for which extrapolation is required. Training data is contained within the unit square whereas the region for which the classifier is tested extends beyond the unit square. The classifier is expected to extrapolate the class boundaries. Since the axis-aligned weak-learner is used, straight axis-aligned lines are observed in the extrapolated region. 
 
 \begin{figure}[H]
 	\centering
@@ -131,7 +126,7 @@ To directly combat the misclassification observed above, the first parameter tha
 	\includegraphics[width=0.40\columnwidth]{ax_20_trees}
     \includegraphics[width=0.40\columnwidth]{ax_100_trees}
     \includegraphics[width=0.40\columnwidth]{ax_200_trees}
-    \caption{Overview of spectral subtraction process}
+    \caption{Effect of Changing Number of Trees}
 \end{figure}
 
 Increasing the number of trees is not without a cost. The random forest algorithm scales linearly with the number of trees in the forest. The algorithm has the added benefit that it can be parallelised. Each tree can be grown and tested in parallel.
@@ -146,14 +141,14 @@ Next, we vary the number of split functions while size of the forest is limited 
 	\includegraphics[width=0.40\columnwidth]{splitNum_5}
     \includegraphics[width=0.40\columnwidth]{splitNum_7}
     \includegraphics[width=0.40\columnwidth]{splitNum_15}
-    \caption{Overview of spectral subtraction process}
+    \caption{Effect of Changing \texttt{numSplit}}
 \end{figure}
 
-Observe above that with small number of split numbers, artifacts are observed. Each tree is a very bad learner and thus, even though $E_{com}\approx\nicefrac{E_{av}}{T}$, $E_{com}$ is still rather high. Increasing the number of split functions to $7$, the random forest is clearly trying its best to map the spiral nature of the training data using axis-aligned weak-learners. Setting \texttt{param.splitNum} to 15, not only is each tree highly over-fitted, each tree is also highly correlated and thus with only 10 trees, the committee machine cannot sufficiently average away the over-fitting artifacts.
+Observe above that with a small number of split numbers, artifacts are observed. Each tree is a very bad learner and thus, even though $E_{com}\approx\nicefrac{E_{av}}{T}$, $E_{com}$ is still rather high. Upon increasing the number of split functions to $7$, the random forest clearly tries its best to map the spiral nature of the training data using axis-aligned weak-learners. Upon setting \texttt{param.splitNum} to 15, it can be seen that not only is each tree highly over-fitted, each tree is also highly correlated and thus with only 10 trees, the committee machine cannot sufficiently average away the over-fitting artifacts.
 
 \subsection{Varying Tree Depth}
 
-The third parameter that can be varied is the depth of the tree. More accurate results are produced when tree depth is increased. With depth set at 3 or 5, there are very obvious artifacts that appear; a thin red line when depth is set at 3, and a massive blue region when the depth is set at 5. These are clearly anomalies that have come about because the tree does not sufficiently refine the training data. Increasing the depth to 7, the obvious anomalies have now disappeared but small artifacts still remain at the center of the graph. Results are further improved if the tree depth is increased to 9. 
+The third parameter that can be varied is the depth of the tree. More accurate results are produced when tree depth is increased. With depth set at 3 or 5, there are very obvious artifacts that appear; a thin red line when depth is set at 3, and a massive blue region when the depth is set at 5. These are clearly anomalies that have come about because the tree does not sufficiently refine the training data. Upon increasing the depth to 7, the obvious anomalies disappear but small artifacts still remain at the center of the graph. Results are further improved if the tree depth is increased to 9. 
 
 Tree depth should not be increased arbitrarily for two reasons. As we descend down the tree, training points become refined and get clustered together. If we arbitrarily keep increasing the depth, we will be attempting to separate points which lie very close to one another. Each node's weak-learner has an effect over the entire range of values for which the algorithm is used. Observe what happens when we train on very few number of points in Figure \ref{fig:learners_2}.
 
@@ -165,12 +160,12 @@ Secondly, computational complexity scales exponentially with tree depth. It is m
 	\includegraphics[width=0.40\columnwidth]{tree_depth_5}
     \includegraphics[width=0.40\columnwidth]{tree_depth_7}
     \includegraphics[width=0.40\columnwidth]{tree_depth_9}
-    \caption{Overview of spectral subtraction process}
+    \caption{Effect of Varying Tree Depth}
 \end{figure}
 
-\subsection{Testing with Different weak-learners}
+\subsection{Testing with Different Weak-Learners}
 
-The entirety of the discussion above has all been made with respect to the axis-aligned weak-learner. The ideal values of random forest parameters very much depend on the class of weak-learner used. The graphs below show the effects of using different weak-learners. The class boundaries in the extrapolated region follow the general shape of the learner class used. For reference, an random forest trained using the axis-aligned weak-learner with all 3 parameters turned has also been graphed.
+The entirety of the discussion above has been made with respect to the axis-aligned weak-learner. The ideal values of random forest parameters very much depend on the class of weak-learner used. The graphs below show the effects of using different weak-learners. The class boundaries in the extrapolated region follow the general shape of the learner class used. For reference, an random forest trained using the axis-aligned weak-learner with all 3 parameters turned has also been graphed.
 
 \begin{figure}[H]
 	\centering
@@ -178,17 +173,17 @@ The entirety of the discussion above has all been made with respect to the axis-
 	\includegraphics[width=0.40\columnwidth]{linear}
     \includegraphics[width=0.40\columnwidth]{quad}
     \includegraphics[width=0.40\columnwidth]{cubic}
-    \caption{Overview of spectral subtraction process}
+    \caption{Classification Boundaries obtained Using Different Weak-Learners}
 \end{figure}
 
 
 \section{K-means Codebook}
 
-\subsection*{Vocabulary Size}
+\subsection{Vocabulary Size}
 
-Using the K-means algorithm to form a Bag-of-Words (BoW) representation, we have direct control over vocabulary size. The vocabulary is going to consist of exactly K codewords. The BoW can be interpreted as a dimensionality reduction technique that shrinks an image into a histogram which indicates the frequency of occurrence of each codewords in our vocabulary. Note that classification is performed using only the histogram and the physical meaning of each codeword is not relevant to the random forest classifier. In fact, more often than not, codewodes do not match heurestic features such as eyes or wheels. With that in mind, it should be noted that the performance of the classifier is heavily dependent on richness of the vocabulary. To form the K-means codebook, matlab's inbuilt function \texttt{kmeans} is used; matlab implements the K-means++ algorithm (QUOTE THIS SHIT), which exhibits a complexity of $\mathcal{O}(\text{log} \ \text{K})$.
+Using the K-means algorithm to form a Bag-of-Words (BoW) representation, we have direct control over vocabulary size. The vocabulary is going to consist of exactly K codewords. The BoW can be interpreted as a dimensionality reduction technique that shrinks an image into a histogram which indicates the frequency of occurrence of each codewords in our vocabulary. Note that classification is performed using only the histogram and the physical meaning of each codeword is not relevant to the random forest classifier. In fact, more often than not, codewodes do not match heurestic features such as eyes or wheels. With that in mind, it should be noted that the performance of the classifier is heavily dependent on richness of the vocabulary. To form the K-means codebook, matlab's inbuilt function \texttt{kmeans} is used; matlab implements the K-means++ algorithm\cite{arthur2007k}, which exhibits a complexity of $\mathcal{O}(\text{log} \ \text{K})$.
 
-\subsection*{Vector Quantisation Process}
+\subsection{Vector Quantisation Process}
 
 The first step in the vector quantisation process involves extracting Scale Invariant Feature Transform (SIFT) descriptors for each image in our training dataset. Extraction is performed using the function \texttt{vl\_phow}, which comes with the reference code provided for this coursework. The function outputs 128-dimensional descriptors; note that the number of descriptors returned depends on the image. After obtaining descriptors for each image in the training dataset, 100,000 descriptors are randomly selected to form a intermediate dataset in a 128-dimensional vector space. This intermediate dataset is fed into the K-means algorithm; only 100,000 descriptors are used to place reasonable bounds the computational complexity both in terms of time and memory. The K-means algorithm will return K cluster centers, where K represents the size of our codebook.
 
@@ -196,7 +191,7 @@ The first step in the vector quantisation process involves extracting Scale Inva
 	\centering
     \includegraphics[width=0.49\columnwidth]{hist_10}
     \includegraphics[width=0.49\columnwidth]{hist_512}
-    \caption{Overview of spectral subtraction process}
+    \caption{Averaged Class Histograms for Classes 1, 4 and 7}
     \label{fig:hists}
 \end{figure}
 
@@ -211,15 +206,15 @@ The RF classifier is trained using a histograms obtained from a codebook, consis
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\columnwidth]{images}
-    \caption{Overview of spectral subtraction process}
+    \caption{Example Successes and Failures Visualization}
 \end{figure}
 
 In general, instead of looking at individual successes and failure, the results can be summarized into a confusion matrix. The confusion matrix below shows that trilobites and windsor chair were always correctly classified, whereas the forest is the worst at identifying watches. 
 
 \begin{figure}[H]
 	\centering
-    \includegraphics[width=0.70\columnwidth]{confus}    
-    \caption{Overview of spectral subtraction process}
+    \includegraphics[width=0.49\columnwidth]{confus}    
+    \caption{Confusion Matrix Visualization}
 \end{figure}
 
 
@@ -235,7 +230,7 @@ As mentioned above, the K-means++ algorithm that matlab implements scales with $
 	\centering
     \includegraphics[width=0.49\columnwidth]{numBins_acc}
 	\includegraphics[width=0.49\columnwidth]{numBins_complexity}
-    \caption{Overview of spectral subtraction process}
+    \caption{Effect of Increasing Vocabulary Size on Accuracy and Computational Time}
     \label{fig:bins_acc}
 \end{figure}
 
@@ -247,7 +242,7 @@ The graphs below corroborate the discussion above about the effects that \texttt
 	\centering
     \includegraphics[width=0.49\columnwidth]{numTrees_acc}
 	\includegraphics[width=0.49\columnwidth]{numTrees_complexity}
-    \caption{Overview of spectral subtraction process}
+    \caption{Effect of Changing Number of Trees}
     \label{fig:numtrees_caltech}
 \end{figure}
 
@@ -259,7 +254,7 @@ Again, the graphs below corroborate the discussion above about the effects of in
 	\centering
     \includegraphics[width=0.49\columnwidth]{numSplits_acc}
 	\includegraphics[width=0.49\columnwidth]{numSplits_complexity}
-    \caption{Overview of spectral subtraction process}
+    \caption{Effect of Varying \texttt{numSplit}}
 \end{figure}
 
 \subsection*{Depth of Tree}
@@ -270,7 +265,7 @@ Lastly, the impact of tree depth is studied. The most important thing to notice 
 	\centering
     \includegraphics[width=0.49\columnwidth]{depth_acc}
 	\includegraphics[width=0.49\columnwidth]{depth_complexity}
-    \caption{Overview of spectral subtraction process}
+    \caption{Effect of Increasing Tree Depth}
 \end{figure}
 
 \section{RF Codebook}
@@ -281,14 +276,44 @@ The previous section explored codebook generation using the K-means algorithm. T
 
 \subsection{Performance of RF Codebook}
 
+The performance of the RF codebook is extremely difficult to test. The K-means algorithm only takes as input, the vocabulary size. As such, since there is only one parameter, the performance can be easily studied. We noted that increasing the vocabulary size for the K-means algorithm, generally improved the performance; oberve Figure \ref{fig:bins_acc}, there is generally an upward trend regardless especially if the number of trees in the classifer is high. This is not the case for the K-means algorithm. The performance is highly sporadic. 
 
+
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.49\columnwidth]{rf_codebook_acc}
+    \caption{Performance of RF Codebook}
+\end{figure}
+
+The main reason for this is there are 2 main ways to increase the size of the RF codebook. One can increase the size of the codebook by increasing the number of trees or by increasing the tree depth. In the results presented above, codebook size was increased by simply increasing the number of trees. One possible method of selecting the multiple tuning parameters of the RF codebook is to perform cross-validation. Note that using the correct tuning parameters, it is possible to obtain performance that is similar to that of the K-means codebook. 
 
 \subsection{Computational Complexity}
 
-As mentioned in the lecture notes, the computational complexity of the K-means algorithm is $\mathcal{O}(\text{DN}'\text{K})$ whereas the complexity of the RF codebook is $\mathcal{O}(\sqrt{\text{D}}\text{N}'\text{log K})$. In the equations, $\text{D}$ represents the dimension of the descriptor vectors, $\text{N}'$ represents the number of descriptor vectors and $\text{K}$ represents the size of the codebook. The $\text{log \ K}$ complexity with respect to the size of the codebook is the main advantage of using a RF codebook. Keeping D and N constant, the graph below shows computational complexity with respect to the number of codewords.
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.49\columnwidth]{rf_complex}
+    \caption{Comparison of Computational Complexity}
+\end{figure}
 
+
+In the lecture notes, the computational complexity of the K-means algorithm is $\mathcal{O}(\text{DN}'\text{K})$ whereas the complexity of the RF codebook is $\mathcal{O}(\sqrt{\text{D}}\text{N}'\text{log K})$. In the equations, $\text{D}$ represents the dimension of the descriptor vectors, $\text{N}'$ represents the number of descriptor vectors and $\text{K}$ represents the size of the codebook. The $\text{log \ K}$ complexity with respect to the size of the codebook is the main advantage of using a RF codebook. With this in mind, the computation complexity of both codebook generation algorithms is tested. The results obtained are visualized in the figure above.
+ 
+Note that the graph obtained for the K-means algorithm is completely expected. As discussed above, matlab implements the K-means++ algorithm which scales with logarithmically with K. The graph obtained for the RF codebook is not scaling according to the bound presented in the lecture notes. There could be multiple reasons for this. One of the many factors causing the random forest to slow down is the number of split functions that are tried at each node. Regardless, it is important to note that the RF codebook admits a parallel implementation whereas the K-Means algorithm cannot be parallelised. 
 
 \section{Conclusion}
 
-All in all, this report explores the Random Decision Forests and the explores the effect that the multiple tuning parameters have on the algorithm's accuracy. To start,multiple weak-learners were explored in section \ref{sec:train}. The discriminating power of different learning classes as well as the relation to the number of split functions over which optimization is performed was studied. With the 2-dimensional Toy Spiral dataset, artifacts due to underfitting and overfitting were visualized in section \ref{eq:eval}. Next, codebook generation using the K-means algorithm was studied. The process of generating an intermediate descriptor vector space using \texttt{vl\_phow} was briefly discussed. Next, the effect of RF tuning parameters was analyzed analytically using the CalTech 101 dataset. Conclusions such as increasing the number of trees in the forest eventually leads to a plateau and the depth of the tree causes a exponential increase in complexity were drawn and substantiated with empirical evidence. Lastly, the RF codebook was analyzed. The difficulty in generating a rich and diverse codebook due to the influence of many tune manager
+All in all, this report explores the Random Decision Forests and the explores the effect that the multiple tuning parameters have on the algorithm's accuracy. To start,multiple weak-learners were explored in section \ref{sec:train}. The discriminating power of different learning classes as well as the relation to the number of split functions over which optimization is performed was studied. With the 2-dimensional Toy Spiral dataset, artifacts due to underfitting and overfitting were visualized in section \ref{sec:eval}. Next, codebook generation using the K-means algorithm was studied. The process of generating an intermediate descriptor vector space using \texttt{vl\_phow} was briefly discussed. Next, the effect of RF tuning parameters was analyzed analytically using the CalTech 101 dataset. Conclusions such as increasing the number of trees in the forest eventually leads to a plateau and the depth of the tree causes a exponential increase in complexity were drawn and substantiated with empirical evidence. Lastly, the RF codebook was analyzed. The difficulty in generating a rich and diverse codebook due to the influence of many tune parameters was learnt. Lastly, computation complexity of the two codebook generation algorithms were studied. 
+
+\newpage
+\onecolumn
+\bibliographystyle{unsrt}
+\bibliography{mlcv_bib}
+\newpage
+\section*{Appendix A: Equations for Non-Linear Weak-Leaners}
+\begin{align}
+h(\textbf{v}, \theta) = [&a_1x_1^2+a_2x_2^2+a_3x_1x_2+a_4x_1+a_5x_2>\tau] \label{eq:quad_split} \\
+h(\textbf{v}, \theta) = [&a_1x_1^3+a_2x_2^3+a_3x_1^2x_2+a_4x_1x_2^2+a_5x_1^2 \nonumber\\
+&+a_6x_2^2+a_7x_1x_2+a_8x_1+a_9x_2>\tau] \label{eq:cubic_split}
+\end{align}
+
 \end{document}
